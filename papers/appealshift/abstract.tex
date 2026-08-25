@@ -1,0 +1,31 @@
+\documentclass{article}
+
+\usepackage[sglblindworkshop]{template/neurips_2026}
+\workshoptitle{AI for Peace Workshop}
+\makeatletter
+\renewcommand{\@noticestring}{Prepared for the NeurIPS 2026 AI for Peace Workshop.}
+\makeatother
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{microtype}
+\hypersetup{hidelinks}
+
+\title{Matched Sources Expose Distinct Admissibility Failures in Small-Model Appeal Review}
+\author{Rafael Gardos\\\texttt{gardos.rafael@gmail.com}}
+
+\begin{document}
+\nolinenumbers
+
+\maketitle
+
+\begin{abstract}
+Plausible evidence can still be inadmissible under a service policy. We test 48 synthetic humanitarian appeal cases in which a current-looking record comes from one of four unlisted sources. A matched control uses the same 12 base requests with both accepted source types, giving 24 valid cases. Each case appears in two meaning-preserving orders. Four pinned four-bit models produce 1,152 reviews under independent assessment and earlier-rationale exposure.
+
+On independent review, Qwen and Gemma accept every valid record and every unlisted record. Mistral accepts 77.1 percent of valid records and rejects 93.8 percent of unlisted records, but routes 90 of 96 unlisted records to information requests instead of the required ineligible disposition. Phi rejects every unlisted record and accepts only 50.0 percent of valid controls. Exact invalid-source accuracy is 0 of 384. Fully grounded accuracy is also zero.
+
+Showing the earlier denial rationale raises false eligibility from 51.6 to 60.4 percent. Mistral supplies the entire 8.85-point increase, whose 12-base-request interval is [7.29, 10.42]. The matched controls reveal constant acceptance in two models. The others reject many unlisted records for the wrong procedural reason. This matters to AI for Peace because an appeal review must distinguish new evidence from admissible evidence before it can support remedy. Organizations considering model-assisted review should test both sides of a source rule and inspect the exact disposition. The cases are fictional, and the result supports no operational aid decision.
+\end{abstract}
+
+\end{document}

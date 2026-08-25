@@ -1,0 +1,37 @@
+{
+  "dataset": "data/appealbench/bf16_confirmatory_subset.jsonl",
+  "dataset_rows": 48,
+  "dataset_sha256": "ba26a9f171d892f3c358db30149d035d1c4f7fcd3cf9e25a98c7725d6b0fbf3c",
+  "errors": [],
+  "run_files": [
+    {
+      "balance": {
+        "independent_review|valid": 48,
+        "prior_rationale|valid": 48
+      },
+      "errors": [],
+      "expected_records": 96,
+      "model": "mlx-community/Qwen3-4B-Instruct-2507-bf16",
+      "path": "experiments/appealbench/bf16/qwen3.jsonl",
+      "primary_audit_disagreements": 0,
+      "records": 96,
+      "revision": "f9e77d4283734966e9cd641bf35547f0cff5d427",
+      "sha256": "36bd734bbb84c340cc0a19f6597e31fef54c5e64120b2e00420fac19c4d78e82"
+    },
+    {
+      "balance": {
+        "independent_review|valid": 48,
+        "prior_rationale|valid": 48
+      },
+      "errors": [],
+      "expected_records": 96,
+      "model": "mlx-community/gemma-3-4b-it-bf16",
+      "path": "experiments/appealbench/bf16/gemma3.jsonl",
+      "primary_audit_disagreements": 0,
+      "records": 96,
+      "revision": "665e04d28e93290c77b7832307606f7e87bb7616",
+      "sha256": "6d9d95f4d60b625f80a6e2651b7b2ce2c60148e08705b8286ca5cdae01655190"
+    }
+  ],
+  "status": "pass"
+}

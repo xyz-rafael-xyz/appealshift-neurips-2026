@@ -1,0 +1,19 @@
+{
+  "checks_executed": 156,
+  "failure_count": 0,
+  "failure_examples": [],
+  "rows": 96,
+  "semantic_cases": 48,
+  "sha256": "ee78160188f0dfc64ab77d38efa62fb704c2e0a3621ecd6e3692c863b5097a6b",
+  "source_variant_counts": {
+    "coordination_digest": 24,
+    "forwarded_screenshot": 24,
+    "portal_export": 24,
+    "staff_chat": 24
+  },
+  "status": "pass",
+  "surface_counts": {
+    "policy_first": 48,
+    "record_first": 48
+  }
+}

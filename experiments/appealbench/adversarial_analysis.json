@@ -1,0 +1,103 @@
+{
+  "conditions": [
+    {
+      "condition": "independent_review",
+      "disposition_accuracy": 0,
+      "false_eligibility": 0.5,
+      "n": 96
+    },
+    {
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.10416666666666667,
+      "false_eligibility": 0.5729166666666666,
+      "n": 96
+    }
+  ],
+  "model_conditions": [
+    {
+      "condition": "independent_review",
+      "disposition_accuracy": 0,
+      "false_eligibility": 0,
+      "fully_grounded": 0,
+      "model": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
+      "n": 24
+    },
+    {
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0,
+      "false_eligibility": 0.2916666666666667,
+      "fully_grounded": 0,
+      "model": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
+      "n": 24
+    },
+    {
+      "condition": "independent_review",
+      "disposition_accuracy": 0,
+      "false_eligibility": 0,
+      "fully_grounded": 0,
+      "model": "mlx-community/Phi-4-mini-instruct-mlx-4Bit",
+      "n": 24
+    },
+    {
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.4166666666666667,
+      "false_eligibility": 0,
+      "fully_grounded": 0,
+      "model": "mlx-community/Phi-4-mini-instruct-mlx-4Bit",
+      "n": 24
+    },
+    {
+      "condition": "independent_review",
+      "disposition_accuracy": 0,
+      "false_eligibility": 1,
+      "fully_grounded": 0,
+      "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+      "n": 24
+    },
+    {
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0,
+      "false_eligibility": 1,
+      "fully_grounded": 0,
+      "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+      "n": 24
+    },
+    {
+      "condition": "independent_review",
+      "disposition_accuracy": 0,
+      "false_eligibility": 1,
+      "fully_grounded": 0,
+      "model": "mlx-community/gemma-3-text-4b-it-4bit",
+      "n": 24
+    },
+    {
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0,
+      "false_eligibility": 1,
+      "fully_grounded": 0,
+      "model": "mlx-community/gemma-3-text-4b-it-4bit",
+      "n": 24
+    }
+  ],
+  "records": 192,
+  "run_files": [
+    {
+      "path": "experiments/appealbench/adversarial/qwen3.jsonl",
+      "sha256": "958255a6da24e7ca994017365c75f9bc28285aba3931de559fd2a3bbd6e8edd1"
+    },
+    {
+      "path": "experiments/appealbench/adversarial/phi4mini.jsonl",
+      "sha256": "b5a62641a31d1774e16ab82839789a7551c99f027ec8fea8c80809bda053df47"
+    },
+    {
+      "path": "experiments/appealbench/adversarial/gemma3.jsonl",
+      "sha256": "0bd863cb4a20d2b402bf0005a940e85369ea6f523f660be8aec12ce92633250d"
+    },
+    {
+      "path": "experiments/appealbench/adversarial/mistral7b.jsonl",
+      "sha256": "b8708d513450078df001680d98858bdbd596fba400dfeae9101e6ec3b9420bac"
+    }
+  ],
+  "semantic_cases": 12,
+  "status": "exploratory_robustness_slice"
+}

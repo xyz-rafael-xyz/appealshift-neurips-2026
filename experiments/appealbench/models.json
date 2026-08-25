@@ -1,0 +1,33 @@
+{
+  "models": [
+    {
+      "family": "Qwen3",
+      "id": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+      "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b"
+    },
+    {
+      "family": "Phi-4",
+      "id": "mlx-community/Phi-4-mini-instruct-mlx-4Bit",
+      "revision": "d848c30f6d5419b9892433cf6b1062626d15340e"
+    },
+    {
+      "family": "Gemma 3",
+      "id": "mlx-community/gemma-3-text-4b-it-4bit",
+      "revision": "4f665a4c50ecfe4ecdc34056ab52fe3e3c4abf9e"
+    },
+    {
+      "family": "Mistral",
+      "id": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
+      "revision": "a4b8f870474b0eb527f466a03fbc187830d271f5"
+    }
+  ],
+  "runtime": {
+    "mlx_lm": "0.31.3",
+    "mlx": "0.32.1",
+    "python": "3.12",
+    "decoding": "greedy",
+    "temperature": 0.0,
+    "max_tokens": 180,
+    "batch_size": 4
+  }
+}

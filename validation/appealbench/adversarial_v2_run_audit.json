@@ -1,0 +1,65 @@
+{
+  "dataset": "data/appealbench/adversarial_v2.jsonl",
+  "dataset_rows": 96,
+  "dataset_sha256": "ee78160188f0dfc64ab77d38efa62fb704c2e0a3621ecd6e3692c863b5097a6b",
+  "errors": [],
+  "run_files": [
+    {
+      "balance": {
+        "independent_review|invalid": 96,
+        "prior_rationale|invalid": 96
+      },
+      "errors": [],
+      "expected_records": 192,
+      "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+      "path": "experiments/appealbench/adversarial_v2/qwen3.jsonl",
+      "primary_audit_disagreements": 0,
+      "records": 192,
+      "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+      "sha256": "ce1a92e3b9320572f8786fd5e4d963ec1b3409fa0ae80da6956ab22f63cdc77e"
+    },
+    {
+      "balance": {
+        "independent_review|invalid": 96,
+        "prior_rationale|invalid": 96
+      },
+      "errors": [],
+      "expected_records": 192,
+      "model": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
+      "path": "experiments/appealbench/adversarial_v2/mistral7b.jsonl",
+      "primary_audit_disagreements": 0,
+      "records": 192,
+      "revision": "a4b8f870474b0eb527f466a03fbc187830d271f5",
+      "sha256": "5aeb86d1ead82dd5936877061c83e861b142818da81bc7d5965dfdbc29632774"
+    },
+    {
+      "balance": {
+        "independent_review|invalid": 96,
+        "prior_rationale|invalid": 96
+      },
+      "errors": [],
+      "expected_records": 192,
+      "model": "mlx-community/Phi-4-mini-instruct-mlx-4Bit",
+      "path": "experiments/appealbench/adversarial_v2/phi4mini.jsonl",
+      "primary_audit_disagreements": 0,
+      "records": 192,
+      "revision": "d848c30f6d5419b9892433cf6b1062626d15340e",
+      "sha256": "58aad5be20f36c0f3dd18d69b148e8a6a2aa6f57c8cd6c05dc81373d9a6d8a03"
+    },
+    {
+      "balance": {
+        "independent_review|invalid": 96,
+        "prior_rationale|invalid": 96
+      },
+      "errors": [],
+      "expected_records": 192,
+      "model": "mlx-community/gemma-3-text-4b-it-4bit",
+      "path": "experiments/appealbench/adversarial_v2/gemma3.jsonl",
+      "primary_audit_disagreements": 0,
+      "records": 192,
+      "revision": "4f665a4c50ecfe4ecdc34056ab52fe3e3c4abf9e",
+      "sha256": "efeac181d78f0f305b163c26793421726376b569a247da02f34d75aee3bfc4ce"
+    }
+  ],
+  "status": "pass"
+}

@@ -1,0 +1,16 @@
+{
+  "development": {
+    "base_cases": 16,
+    "path": "data/appealbench/development.jsonl",
+    "rows": 16,
+    "sha256": "551e1040dbe6d6fd9f365d4267115eb124fa2a7a6a2c2740b728de5554038a24"
+  },
+  "errors": [],
+  "evaluation": {
+    "base_cases": 96,
+    "path": "data/appealbench/evaluation.jsonl",
+    "rows": 192,
+    "sha256": "5a7a74533c614dcdd244003bf9411d883237daac818731625d3229ea4c7ee9cf"
+  },
+  "status": "pass"
+}

@@ -1,0 +1,778 @@
+{
+  "analysis_kind": "matched valid and plausible unlisted source discrimination",
+  "confusion": [
+    {
+      "condition": "independent_review",
+      "count": 48,
+      "model": "Gemma-3-4B",
+      "predicted": "ELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "INELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "UNPARSED",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 96,
+      "model": "Gemma-3-4B",
+      "predicted": "ELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "INELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "UNPARSED",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 48,
+      "model": "Gemma-3-4B",
+      "predicted": "ELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "INELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "UNPARSED",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 96,
+      "model": "Gemma-3-4B",
+      "predicted": "ELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "INELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Gemma-3-4B",
+      "predicted": "UNPARSED",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 37,
+      "model": "Mistral-7B",
+      "predicted": "ELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "INELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 11,
+      "model": "Mistral-7B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "UNPARSED",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 6,
+      "model": "Mistral-7B",
+      "predicted": "ELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "INELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 90,
+      "model": "Mistral-7B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "UNPARSED",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 48,
+      "model": "Mistral-7B",
+      "predicted": "ELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "INELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "UNPARSED",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 40,
+      "model": "Mistral-7B",
+      "predicted": "ELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "INELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 56,
+      "model": "Mistral-7B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Mistral-7B",
+      "predicted": "UNPARSED",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 24,
+      "model": "Phi-4-mini",
+      "predicted": "ELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Phi-4-mini",
+      "predicted": "INELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 7,
+      "model": "Phi-4-mini",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 17,
+      "model": "Phi-4-mini",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Phi-4-mini",
+      "predicted": "UNPARSED",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Phi-4-mini",
+      "predicted": "ELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Phi-4-mini",
+      "predicted": "INELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 72,
+      "model": "Phi-4-mini",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 24,
+      "model": "Phi-4-mini",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Phi-4-mini",
+      "predicted": "UNPARSED",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 10,
+      "model": "Phi-4-mini",
+      "predicted": "ELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Phi-4-mini",
+      "predicted": "INELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 9,
+      "model": "Phi-4-mini",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 29,
+      "model": "Phi-4-mini",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Phi-4-mini",
+      "predicted": "UNPARSED",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Phi-4-mini",
+      "predicted": "ELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 24,
+      "model": "Phi-4-mini",
+      "predicted": "INELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 36,
+      "model": "Phi-4-mini",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 36,
+      "model": "Phi-4-mini",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Phi-4-mini",
+      "predicted": "UNPARSED",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 48,
+      "model": "Qwen3-4B",
+      "predicted": "ELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "INELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "UNPARSED",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 96,
+      "model": "Qwen3-4B",
+      "predicted": "ELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "INELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "independent_review",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "UNPARSED",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 48,
+      "model": "Qwen3-4B",
+      "predicted": "ELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "INELIGIBLE",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "UNPARSED",
+      "source_class": "matched_valid",
+      "target": "ELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 96,
+      "model": "Qwen3-4B",
+      "predicted": "ELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "INELIGIBLE",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "NEED_INFORMATION",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "HUMAN_REVIEW",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    },
+    {
+      "condition": "prior_rationale",
+      "count": 0,
+      "model": "Qwen3-4B",
+      "predicted": "UNPARSED",
+      "source_class": "plausible_unlisted",
+      "target": "INELIGIBLE"
+    }
+  ],
+  "invalid_false_eligibility_clustered_by_base_request": {
+    "base_request_effects": {
+      "complaint_callback-invalid-1": 0.09375,
+      "complaint_callback-invalid-2": 0.125,
+      "complaint_callback-invalid-3": 0.09375,
+      "legal_information-invalid-1": 0.09375,
+      "legal_information-invalid-2": 0.09375,
+      "legal_information-invalid-3": 0.0625,
+      "remote_checkin-invalid-1": 0.125,
+      "remote_checkin-invalid-2": 0.125,
+      "remote_checkin-invalid-3": 0.09375,
+      "shelter_maintenance-invalid-1": 0.03125,
+      "shelter_maintenance-invalid-2": 0.0625,
+      "shelter_maintenance-invalid-3": 0.0625
+    },
+    "ci95": [
+      0.07291666666666667,
+      0.10416666666666667
+    ],
+    "effects_per_cluster": 32,
+    "n_base_request_clusters": 12,
+    "prior_minus_independent": 0.08854166666666667,
+    "resamples": 20000,
+    "seed": 20260825
+  },
+  "invalid_records": 768,
+  "joint_model_condition": [
+    {
+      "balanced_source_discrimination": 0.5,
+      "condition": "independent_review",
+      "invalid_exact_accuracy": 0.0,
+      "invalid_n": 96,
+      "invalid_specificity": 0.0,
+      "model": "Gemma-3-4B",
+      "valid_exact_accuracy": 1.0,
+      "valid_n": 48,
+      "valid_sensitivity": 1.0
+    },
+    {
+      "balanced_source_discrimination": 0.5,
+      "condition": "prior_rationale",
+      "invalid_exact_accuracy": 0.0,
+      "invalid_n": 96,
+      "invalid_specificity": 0.0,
+      "model": "Gemma-3-4B",
+      "valid_exact_accuracy": 1.0,
+      "valid_n": 48,
+      "valid_sensitivity": 1.0
+    },
+    {
+      "balanced_source_discrimination": 0.8541666666666667,
+      "condition": "independent_review",
+      "invalid_exact_accuracy": 0.0,
+      "invalid_n": 96,
+      "invalid_specificity": 0.9375,
+      "model": "Mistral-7B",
+      "valid_exact_accuracy": 0.7708333333333334,
+      "valid_n": 48,
+      "valid_sensitivity": 0.7708333333333334
+    },
+    {
+      "balanced_source_discrimination": 0.7916666666666667,
+      "condition": "prior_rationale",
+      "invalid_exact_accuracy": 0.0,
+      "invalid_n": 96,
+      "invalid_specificity": 0.5833333333333334,
+      "model": "Mistral-7B",
+      "valid_exact_accuracy": 1.0,
+      "valid_n": 48,
+      "valid_sensitivity": 1.0
+    },
+    {
+      "balanced_source_discrimination": 0.75,
+      "condition": "independent_review",
+      "invalid_exact_accuracy": 0.0,
+      "invalid_n": 96,
+      "invalid_specificity": 1.0,
+      "model": "Phi-4-mini",
+      "valid_exact_accuracy": 0.5,
+      "valid_n": 48,
+      "valid_sensitivity": 0.5
+    },
+    {
+      "balanced_source_discrimination": 0.6041666666666666,
+      "condition": "prior_rationale",
+      "invalid_exact_accuracy": 0.25,
+      "invalid_n": 96,
+      "invalid_specificity": 1.0,
+      "model": "Phi-4-mini",
+      "valid_exact_accuracy": 0.20833333333333334,
+      "valid_n": 48,
+      "valid_sensitivity": 0.20833333333333334
+    },
+    {
+      "balanced_source_discrimination": 0.5,
+      "condition": "independent_review",
+      "invalid_exact_accuracy": 0.0,
+      "invalid_n": 96,
+      "invalid_specificity": 0.0,
+      "model": "Qwen3-4B",
+      "valid_exact_accuracy": 1.0,
+      "valid_n": 48,
+      "valid_sensitivity": 1.0
+    },
+    {
+      "balanced_source_discrimination": 0.5,
+      "condition": "prior_rationale",
+      "invalid_exact_accuracy": 0.0,
+      "invalid_n": 96,
+      "invalid_specificity": 0.0,
+      "model": "Qwen3-4B",
+      "valid_exact_accuracy": 1.0,
+      "valid_n": 48,
+      "valid_sensitivity": 1.0
+    }
+  ],
+  "models": [
+    "Gemma-3-4B",
+    "Mistral-7B",
+    "Phi-4-mini",
+    "Qwen3-4B"
+  ],
+  "run_sha256": {
+    "experiments/appealbench/adversarial_v2/gemma3.jsonl": "efeac181d78f0f305b163c26793421726376b569a247da02f34d75aee3bfc4ce",
+    "experiments/appealbench/adversarial_v2/mistral7b.jsonl": "5aeb86d1ead82dd5936877061c83e861b142818da81bc7d5965dfdbc29632774",
+    "experiments/appealbench/adversarial_v2/phi4mini.jsonl": "58aad5be20f36c0f3dd18d69b148e8a6a2aa6f57c8cd6c05dc81373d9a6d8a03",
+    "experiments/appealbench/adversarial_v2/qwen3.jsonl": "ce1a92e3b9320572f8786fd5e4d963ec1b3409fa0ae80da6956ab22f63cdc77e",
+    "experiments/appealbench/matched_valid_controls/gemma3.jsonl": "e987503320f3c713b701d7eead97d3ed070ca15c5059dfe7c2239bf5ca0c8436",
+    "experiments/appealbench/matched_valid_controls/mistral7b.jsonl": "cfbff101d886afc76a49273a7fbc59d321fa14f55004c9e57dd4622dee020de4",
+    "experiments/appealbench/matched_valid_controls/phi4mini.jsonl": "ac2a0ab0436f3730fe46e688a087766eca0594e90832efb685b81cc4c2511d7b",
+    "experiments/appealbench/matched_valid_controls/qwen3.jsonl": "ffcce191167a5441cc3ac4da392d0b29fb8162d45d55700538791f2f7aa708d0"
+  },
+  "valid_records": 384
+}

@@ -1,0 +1,65 @@
+{
+  "dataset": "data/appealbench/adversarial_slice.jsonl",
+  "dataset_rows": 24,
+  "dataset_sha256": "1bc15b7082ebcc95a8851f6e0d110a1ed7d4d51477052778d73687271aa86e36",
+  "errors": [],
+  "run_files": [
+    {
+      "balance": {
+        "independent_review|invalid": 24,
+        "prior_rationale|invalid": 24
+      },
+      "errors": [],
+      "expected_records": 48,
+      "model": "mlx-community/Qwen3-4B-Instruct-2507-4bit",
+      "path": "experiments/appealbench/adversarial/qwen3.jsonl",
+      "primary_audit_disagreements": 0,
+      "records": 48,
+      "revision": "50d427756c6b1b2fe0c0a10f67fbda1fc8e82c1b",
+      "sha256": "958255a6da24e7ca994017365c75f9bc28285aba3931de559fd2a3bbd6e8edd1"
+    },
+    {
+      "balance": {
+        "independent_review|invalid": 24,
+        "prior_rationale|invalid": 24
+      },
+      "errors": [],
+      "expected_records": 48,
+      "model": "mlx-community/Phi-4-mini-instruct-mlx-4Bit",
+      "path": "experiments/appealbench/adversarial/phi4mini.jsonl",
+      "primary_audit_disagreements": 0,
+      "records": 48,
+      "revision": "d848c30f6d5419b9892433cf6b1062626d15340e",
+      "sha256": "b5a62641a31d1774e16ab82839789a7551c99f027ec8fea8c80809bda053df47"
+    },
+    {
+      "balance": {
+        "independent_review|invalid": 24,
+        "prior_rationale|invalid": 24
+      },
+      "errors": [],
+      "expected_records": 48,
+      "model": "mlx-community/gemma-3-text-4b-it-4bit",
+      "path": "experiments/appealbench/adversarial/gemma3.jsonl",
+      "primary_audit_disagreements": 0,
+      "records": 48,
+      "revision": "4f665a4c50ecfe4ecdc34056ab52fe3e3c4abf9e",
+      "sha256": "0bd863cb4a20d2b402bf0005a940e85369ea6f523f660be8aec12ce92633250d"
+    },
+    {
+      "balance": {
+        "independent_review|invalid": 24,
+        "prior_rationale|invalid": 24
+      },
+      "errors": [],
+      "expected_records": 48,
+      "model": "mlx-community/Mistral-7B-Instruct-v0.3-4bit",
+      "path": "experiments/appealbench/adversarial/mistral7b.jsonl",
+      "primary_audit_disagreements": 0,
+      "records": 48,
+      "revision": "a4b8f870474b0eb527f466a03fbc187830d271f5",
+      "sha256": "b8708d513450078df001680d98858bdbd596fba400dfeae9101e6ec3b9420bac"
+    }
+  ],
+  "status": "pass"
+}

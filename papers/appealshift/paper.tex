@@ -1,0 +1,313 @@
+\documentclass{article}
+
+\usepackage[sglblindworkshop]{template/neurips_2026}
+\workshoptitle{AI for Peace Workshop}
+\makeatletter
+\renewcommand{\@noticestring}{Prepared for the NeurIPS 2026 AI for Peace Workshop.}
+\makeatother
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{array}
+\hypersetup{colorlinks=true,citecolor=blue,urlcolor=blue}
+
+\title{Matched Sources Expose Distinct Admissibility Failures in Small-Model Appeal Review}
+\author{Rafael Gardos\\\texttt{gardos.rafael@gmail.com}}
+
+\begin{document}
+\nolinenumbers
+
+\maketitle
+
+\begin{abstract}
+Plausible evidence can still be inadmissible under a service policy. We test 48 synthetic humanitarian appeal cases in which a current-looking record comes from one of four unlisted sources. A matched control uses the same 12 base requests with both accepted source types, giving 24 valid cases. Each case appears in two meaning-preserving orders. Four pinned four-bit models produce 1,152 reviews under independent assessment and earlier-rationale exposure. On independent review, Qwen and Gemma accept every valid record and every unlisted record. Mistral accepts 77.1\% of valid records and rejects 93.8\% of unlisted records, but routes 90 of 96 unlisted records to information requests instead of the required ineligible disposition. Phi rejects every unlisted record and accepts only 50.0\% of valid controls. Exact invalid-source accuracy is 0 of 384. Fully grounded accuracy is also zero. Showing the earlier denial rationale raises false eligibility from 51.6\% to 60.4\%. Mistral supplies the entire 8.85-point increase, whose 12-base-request interval is [7.29, 10.42]. The matched controls reveal constant acceptance in two models. The others reject many unlisted records for the wrong procedural reason. The cases are fictional, and the result supports no operational aid decision.
+\end{abstract}
+
+\section{Introduction}
+
+An appeal channel can exist while offering little chance of correction. A reviewer may accept a current-looking record even when the governing policy does not recognize its source. This concern matters when a language model helps staff sort requests or draft replies. It also applies when a model prepares a record for later human review. Human presence at the end of a workflow does not reveal whether the model has already narrowed the options that reach that person.
+
+Humanitarian accountability gives this problem a direct connection to peace work. The Core Humanitarian Standard asks organizations to support crisis-affected people in ways that respect rights and dignity. It also calls for people and communities to hold those organizations to account \citep{chs2024standard}. Research on artificial intelligence in humanitarian action warns that technical benefits arrive with risks to rights and vulnerable populations \citep{beduschi2022humanitarian}. An accurate model response cannot create an accessible complaint channel or supply accountable authority. It can still affect the information and recommendation that enter such a channel.
+
+We study one bounded behavior in that process. The primary experiment asks whether a model can reject a plausible record whose source falls outside an explicit policy whitelist. It also asks whether a case-specific denial rationale changes that assessment. The rationale has no evidentiary status under the supplied rules. The outcome is an exact service-review disposition with a cited policy clause and evidence identifiers.
+
+The primary set contains 48 semantic invalid-source cases across four fictional humanitarian service workflows. Four plausible source types replace an accepted source while the rest of the record remains current. The matched control uses the same 12 base requests and instantiates both source types that the policy accepts. Each case appears in two meaning-preserving orders. We test independent review and prior-rationale exposure with four pinned local instruction models. An earlier 96-case set supplies a secondary audit of valid, invalid, incomplete and conflicting evidence.
+
+The central result is heterogeneous. None of 384 independent reviews returns the exact invalid-source disposition. Qwen and Gemma are constant acceptors across the matched source classes. Mistral usually distinguishes them but asks for information where C2 requires rejection. Phi rejects every unlisted source but accepts only half of the valid controls. The earlier rationale makes Mistral less selective and raises pooled false eligibility by 8.85 points. The matched design shows why a zero or a rejection rate alone cannot identify source-rule capability.
+
+The contribution combines a controlled admissibility audit with a procedural requirement for humanitarian accountability. AppealShift holds the request and eligibility fact fixed while crossing accepted and unlisted source types. It then varies prompt order and adds or removes denial context. An organization considering AI support for appeals should test both sides of a source rule. It should inspect the disposition chosen for rejected evidence, rather than counting every non-acceptance as correct.
+
+Procedural completion can conceal weak evidence handling. AppealShift therefore reports the disposition apart from evidence grounding across matched review contexts.
+
+\section{Related work and claim boundary}
+
+\subsection{Contestability and humanitarian accountability}
+
+Contestability concerns how a person can challenge a decision and how an institution can correct error. The concept has several perspectives and cannot be reduced to an explanation interface \citep{lyons2021contestability}. Recent work separates contestability from recourse and identifies evidence that can make a decision indefensible \citep{freiesleben2026contestability}. AppealShift does not propose a new definition or evidence taxonomy. It tests one model behavior that a contestable process may need to detect.
+
+The distinction matters in humanitarian settings. Accountability depends on organizational practice and community influence, not model accuracy alone \citep{chs2024standard}. The cases in this study concern intake and scheduling. Other cases cover referrals and callbacks. They avoid allocation of food or shelter. Medical treatment and legal status also remain outside the benchmark. This boundary keeps the experiment tied to humanitarian service review without turning a synthetic policy into a claim about a real institution.
+
+\subsection{Appeals, admissibility and evidence updating}
+
+Legal datasets already connect initial and appellate decisions. AppealCase contains 10,000 matched civil-case pairs with reversal and new-information annotations \citep{huang2025appealcase}. AppellateGen studies judgment generation over 7,351 case pairs and evidentiary updates \citep{yang2026appellategen}. These datasets are larger and closer to legal practice. They study what changes when new evidence arrives. AppealShift asks whether a reviewer distinguishes evidence content from the source rule that makes the evidence admissible.
+
+Production review systems supply another close comparison. Reviewing the Reviewer represents evidence and verification actions in e-commerce appeals, then records the resulting decision \citep{du2026reviewer}. Its workflow can request missing information and retrieve prior correction patterns. AppealShift makes no novelty claim for checklists or information requests. Its matched control changes only whether the stated record type appears on the policy whitelist. The rationale comparison then tests whether prior case text changes that source discrimination.
+
+Recent agent-memory evaluations show that stored content can acquire authority after source boundaries are compressed, and that provenance can be laundered through persistent memory \citep{zhan2026authority,xu2026laundering}. Those studies concern consolidation and later retrieval. AppealShift tests a current review prompt in which the source rule is explicit and the evidentiary fact is matched. The overlap is the need to keep content separate from the authority of its source.
+
+\subsection{Prior text can change later judgment}
+
+Rationales can alter judgments without adding evidence. Pro and con rationales shift human and model plausibility ratings on commonsense questions \citep{palta2026arguments}. Model beliefs can also distort ratings of persuasive quality \citep{zahraei2026beliefs}. Numerical anchoring changes quantitative judgments in ways that depend on model confidence and post-training \citep{owusu2026anchoring}.
+
+A recent verifier study is especially close in design. A completed audit and repair episode about another item shifted false-alarm thresholds on a byte-identical current task \citep{mazaheri2026audit}. AppealShift instead shows or hides the earlier rationale for the case under review. The current evidence stays fixed, and the output is one of four categorical service dispositions. This distinction supports a narrow gap. Prior work establishes context sensitivity in other judgment tasks. It does not answer how case-specific denial reasoning affects these matched fictional humanitarian reviews.
+
+Authority and dialogue framing provide two further boundaries. Sycophants in the Courtroom finds that models over-trust authoritative but false legal information and react to superficial formatting cues \citep{molfetta2026sycophants}. Rabbani et al. show that minimal conversational framing and a rebuttal can alter model judgment \citep{rabbani2026framing}. These studies establish susceptibility to authority and conversational pressure. AppealShift makes no general claim for either phenomenon. Its manipulated text is the earlier denial rationale for the same case, which has no evidentiary status under the supplied policy. The source comparison instead holds the eligibility fact fixed and changes whether the named record type is accepted.
+
+\section{AppealShift}
+
+\subsection{Scope and cases}
+
+All records are synthetic. No real person or private record appears. The agencies and places are fictional. So are the policies. The eight service families include family-contact appointments and accessible transport scheduling. Replacement-document intake and interpretation booking form another pair. Remote check-ins and legal-information referrals appear as well. Shelter-maintenance referrals and complaint callbacks complete the coverage. These workflows test whether a fixed procedural relation survives vocabulary changes. They do not sample actual humanitarian institutions.
+
+Each case has four policy clauses. Clause C1 states the eligibility fact. C2 names accepted evidence sources and rejects expired or unlisted sources. C3 requests a missing reference from an otherwise current accepted record. C4 sends conflicting accepted records to a human reviewer. The fixed decision order applies C4 first and C3 next. C2 follows, with C1 last.
+
+Four evidence states map to exact dispositions. Valid evidence supports \texttt{ELIGIBLE}. Invalid evidence fails C2 and targets \texttt{INELIGIBLE}. An incomplete record targets \texttt{NEED\_INFORMATION}. Conflicting accepted records target \texttt{HUMAN\_REVIEW}. There are 24 semantic cases per state. A policy-first form and a record-first form yield 192 evaluation rows. A disjoint 16-row development set is excluded from every reported estimate.
+
+This label map belongs to the fictional policy. The humane service response remains an open design choice. A practitioner could reasonably specify \texttt{NEED\_INFORMATION} for an unlisted but current-looking source so the person can provide an accepted record. That alternative would change C2 and its target. AppealShift measures adherence to the rule printed in each case. The benchmark makes no general claim that \texttt{INELIGIBLE} is the best policy.
+
+The shared decision-order paragraph was added after the first development run exposed ambiguous precedence in the natural-language clauses. No evaluation response existed at that point. Version 1 development files remain in the archive. The data and labels were retained. The conditions and confirmatory contrast were retained as well.
+
+\subsection{Review conditions}
+
+Independent review hides the earlier disposition and rationale. The model receives the fictional policy with the current record. Appeal evidence appears in the same prompt. Prior-rationale review adds the earlier \texttt{INELIGIBLE} disposition with its case-specific explanation. It adds no new evidence.
+
+The evidence-checklist workflow includes the denial context and asks for a clause-level evidence check before the structured answer. Commit-first review begins with an independent disposition. A second model call receives that preliminary answer and the earlier denial rationale, then returns the final review. Only final answers enter the main endpoint. Preliminary answers support an update analysis.
+
+Every answer must be one JSON object with a disposition and policy clause. It also carries the evidence identifiers and a short reply. The main scorer accepts only the four specified dispositions. It verifies exact keys and reports strict parsing separately from recovered parsing. A second scorer was written without importing the primary scoring code.
+
+\subsection{Recorded plausible-source experiment}
+
+An author protocol record dated 24 August states that the primary extension was fixed before any new output for it existed. The released public artifact was assembled later and does not independently establish that sequence. The extension contains 48 semantic invalid-evidence cases. Twelve base cases cross four plausible but unlisted source types. Two are a portal export and a forwarded screenshot. The others are a staff chat and a coordination digest. The fictional policy lists other accepted sources and states that an unlisted source is invalid even when its contents look current.
+
+Each semantic case has policy-first and record-first forms, giving 96 surface records. Independent review and prior-rationale review create 192 decisions per model and 768 overall. Every cell contains 96 decisions. The target is always \texttt{INELIGIBLE} under clause C2. Source identity and surface order are balanced within each model-condition cell. The generator was refactored to expose a pure build function before rows were written. A separate validator checked the cross-product and labels. It checked source exclusion and phrase removal in separate passes. The dataset digest was checked as well.
+
+\subsection{Matched valid-source controls}
+
+The control uses the same 12 base requests. C2 names two accepted source types for each request family, and the generator creates one record from each type. It copies the request identifier and C1 fact from the matched invalid case. The fixed evidence sentence states that the current accepted record identifies the request and directly confirms C1. The target is \texttt{ELIGIBLE} under C1 with evidence E1.
+
+The 24 semantic controls appear in both surface orders. Two review conditions and four models produce 384 decisions. The released artifact includes the control protocol and complete data. This is not an external preregistration, and the public artifact history does not establish when the protocol was written. The control construction does not alter the invalid-source records.
+
+\subsection{Models and execution}
+
+The model set contains Qwen3 4B Instruct 2507 and Phi-4-mini Instruct. Gemma 3 4B Instruct and Mistral 7B Instruct v0.3 complete the grid. Each model revision is pinned by repository commit. All runs use local four-bit MLX weights with greedy decoding. The output limit is 180 new tokens. Native chat templates are retained. The Mistral adapter folds the system text into the first user message because its template rejects a system role.
+
+Each model produces 768 final reviews on the earlier four-state grid. That evaluation contains 3,072 final reviews and 768 preliminary commitment calls. Every model, condition, evidence-state cell contains 48 records. The primary plausible-source set adds 192 reviews per model, and the matched control adds 96. Raw outputs are retained without result-dependent removal.
+
+Two earlier checks remain exploratory. The first reruns all 48 valid-case surface variants under independent and prior-rationale review with matching BF16 Qwen and Gemma artifacts. This adds 192 reviews. The second is the 12-case plausible-source slice that motivated the prospective expansion. It adds 192 reviews across the original four-bit models and is kept separate from the new primary set.
+
+\section{Analysis}
+
+Exact disposition accuracy is the primary endpoint for the plausible-source experiment. False eligibility and fully grounded correctness are co-reported diagnostics. Fully grounded correctness requires the disposition and cited clause to agree with the deterministic target. The decisive evidence identifiers must agree too. The matched analysis reports valid-source sensitivity and invalid-source specificity. Specificity treats any non-\texttt{ELIGIBLE} answer as rejection, while exact accuracy still requires the policy's stated disposition.
+
+The rationale effect on false eligibility uses 20,000 bootstrap draws clustered on the 12 base requests. Each sampled base carries both surface forms, all four unlisted source variants, all four models and both conditions. The seed is 20260825. This replaces the earlier row-level interval. With only 12 clusters, percentile coverage is approximate. The interval conditions on the tested artifacts and does not estimate a model population.
+
+The sole confirmatory contrast in the earlier four-state experiment remains prior-rationale minus independent-review accuracy on valid appeals. It is retained as a secondary fixed-artifact result rather than promoted above the source-validity test.
+
+The earlier design prespecified a pool over four fixed models and both surface forms. Its uncertainty comes from 20,000 paired bootstrap samples clustered over the 24 semantic base cases. A paired sign-randomization test uses 100,000 draws. The interval conditions on these model artifacts and does not estimate variation over a model population.
+
+Every model-specific result is exploratory. The two additional workflows are exploratory as well. Results on the other evidence states receive the same treatment. These exploratory intervals are unadjusted, with no multiplicity correction. The artifact includes the earlier analysis plan and seed. Its public history does not establish their timing relative to evaluation generation.
+
+Validation reconstructs every prompt and recomputes every score. It checks model revisions and dataset hashes. Complete cell coverage is checked separately. The primary scorer and independent audit scorer agreed on every final record. A separate program recomputed 1,080 quantitative claims from raw JSONL. Eight of 3,072 final outputs in the earlier grid were unparseable. All 1,152 source-comparison reviews parsed.
+
+\section{Results}
+
+\subsection{The zero contains three different failures}
+
+Independent-review accuracy is zero across 384 invalid-source decisions. Fully grounded accuracy is also zero. Table~\ref{tabconfusion} shows what that pooled zero conceals. Qwen and Gemma choose \texttt{ELIGIBLE} every time. Mistral asks for information on 90 of 96 cases. Phi sends 72 to information requests and 24 to human review. The latter answers reject the unlisted record but do not apply C2's required \texttt{INELIGIBLE} disposition.
+
+\begin{table}[t]
+\caption{Independent invalid-source reviews by predicted disposition. Each row has 96 decisions. E, I, N and H denote \texttt{ELIGIBLE}, \texttt{INELIGIBLE}, \texttt{NEED\_INFORMATION} and \texttt{HUMAN\_REVIEW}.}
+\label{tabconfusion}
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Model & E & I & N & H \\
+\midrule
+Qwen3 4B & 96 & 0 & 0 & 0 \\
+Mistral 7B & 6 & 0 & 90 & 0 \\
+Phi-4-mini & 0 & 0 & 72 & 24 \\
+Gemma 3 4B & 96 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The matched controls identify whether those behaviors discriminate source class. Qwen and Gemma accept all 48 valid controls and all 96 unlisted records. Their balanced discrimination is 50\%, the constant-acceptance value. Phi rejects every unlisted source but accepts only 24 of 48 valid records. Mistral accepts 37 valid records and rejects 90 unlisted records. It reaches 85.4\% balanced discrimination while never returning the exact invalid disposition.
+
+\begin{table}[t]
+\caption{Matched source discrimination in percent. Sensitivity is acceptance of 48 valid controls. Specificity is non-acceptance of 96 unlisted records. Exact is correct invalid-source disposition accuracy. Balanced averages sensitivity and specificity.}
+\label{tabmatched}
+\centering
+\small
+\begin{tabular}{llrrrr}
+\toprule
+Model & Review & Sens. & Spec. & Exact & Balanced \\
+\midrule
+Qwen3 4B & Independent & 100.0 & 0.0 & 0.0 & 50.0 \\
+          & Rationale   & 100.0 & 0.0 & 0.0 & 50.0 \\
+Mistral 7B & Independent & 77.1 & 93.8 & 0.0 & 85.4 \\
+           & Rationale   & 100.0 & 58.3 & 0.0 & 79.2 \\
+Phi-4-mini & Independent & 50.0 & 100.0 & 0.0 & 75.0 \\
+           & Rationale   & 20.8 & 100.0 & 25.0 & 60.4 \\
+Gemma 3 4B & Independent & 100.0 & 0.0 & 0.0 & 50.0 \\
+           & Rationale   & 100.0 & 0.0 & 0.0 & 50.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The source-type breakdown rules out one troublesome document label as the sole cause. Exact accuracy remains zero for each of the four unlisted types. Independent false eligibility ranges from 50.00\% to 56.25\% across those types.
+
+\subsection{A denial rationale raises false eligibility}
+
+With the earlier rationale visible, pooled disposition accuracy rises to 6.25\%. Phi supplies the entire change. Its 24 correct dispositions still cite the wrong clause or evidence, leaving fully grounded accuracy at zero. A fixed five-case record audit found substantive mismatches rather than formatting variants. Every case cites C1, C3 or C4 instead of C2. One also omits E1. The other three models remain at zero disposition accuracy.
+
+False eligibility rises from 51.56\% to 60.42\%. The paired increase is 8.85 points with a descriptive 95\% interval from 7.29 to 10.42 after clustering on the 12 base requests. The resampler first computes 32 paired effects within each base request, then draws 12 base-level means with replacement. Those means range from 3.125 to 12.5 points and all have the same sign, which explains why the interval is narrower than the discarded row-level interval. Mistral accounts for the entire increase, moving from 6.25\% to 41.67\%. Qwen and Gemma remain at 100\%. Phi remains at zero. Under rationale exposure, false eligibility reaches 51.04\% for policy-first prompts and 69.79\% for record-first prompts. The order gap is descriptive, since wording beyond block order also changes with the surface form.
+
+The larger invalid-source result reproduces zero independent exact accuracy and balances four source types. The matched controls prevent that zero from being read as one common failure. The original slice remains in the artifact as the observation that motivated the larger test.
+
+\subsection{The earlier valid-appeal contrast remains secondary}
+
+Three models had no paired change on the earlier valid appeals. Qwen and Gemma were already at 100 percent under independent review. Phi stayed at 62.50 percent. Mistral alone moved, rising from 72.92 to 100 percent. Table~\ref{tabvalid} reports this secondary contrast without promoting it above the matched source result.
+
+\begin{table}[t]
+\caption{Valid-appeal accuracy. Intervals apply to paired percentage-point differences. Omission gives the pooled gain after dropping that row's model.}
+\label{tabvalid}
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Model & Independent & Rationale & Difference & 95\% interval & Omission \\
+\midrule
+Qwen3 4B & 100.00 & 100.00 & 0.00 & 0.00, 0.00 & 9.03 \\
+Phi-4-mini & 62.50 & 62.50 & 0.00 & 0.00, 0.00 & 9.03 \\
+Gemma 3 4B & 100.00 & 100.00 & 0.00 & 0.00, 0.00 & 9.03 \\
+Mistral 7B & 72.92 & 100.00 & 27.08 & 16.67, 39.58 & 0.00 \\
+\midrule
+Pooled & 83.85 & 90.62 & 6.77 & 4.17, 9.90 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The earlier pooled hypothesis predicted lower valid-appeal accuracy after rationale exposure. Instead, the fixed-artifact summary rose from 83.85 to 90.62 percent. Its paired gain was 6.77 points with a clustered interval from 4.17 to 9.90 and $p=0.00046$. Thirteen of 192 matched model and surface pairs improved, and none worsened. Omitting Mistral reduced the gain to zero. Each other omission produced a 9.03-point gain. The pool summarizes four fixed artifacts, and the omission result shows that Mistral supplies its direction. Qwen and Gemma were at ceiling under both conditions, so this contrast had no discriminative power for either model. The result does not establish a general benefit from revealing an earlier rationale.
+
+The BF16 check reproduced the two ceiling cells exactly. Qwen and Gemma returned every disposition correctly at both precisions. Their outputs were fully grounded and schema-valid under both conditions. Quantization therefore does not explain their lack of movement on this subset. Neither artifact had room to reveal a condition effect.
+
+\subsection{Accuracy hid changes in error type}
+
+The rationale changed outcomes outside the confirmatory state. Invalid-case accuracy rose from 9.38 to 24.48 percent. False eligibility on those same records also rose from 49.48 to 61.46 percent. Phi supplied most of the new correct invalid decisions. Mistral introduced the adverse shift in false eligibility, moving from zero to 50 percent. Qwen remained near universal false eligibility, while Gemma remained at 100 percent.
+
+\begin{table}[t]
+\caption{State-specific disposition accuracy in percent. The final column records the safety-relevant response for that state.}
+\label{tabstates}
+\centering
+\small
+\begin{tabular}{lrrp{0.37\linewidth}}
+\toprule
+State & Independent & Rationale & Additional observation \\
+\midrule
+Valid & 83.85 & 90.62 & Failure to correct fell from 16.15 to 9.38 \\
+Invalid & 9.38 & 24.48 & False eligibility rose from 49.48 to 61.46 \\
+Incomplete & 50.00 & 35.94 & Information requests fell by 14.06 points \\
+Conflict & 11.46 & 13.54 & Human review rose by 2.08 points \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Incomplete-case accuracy fell from 50.00 to 35.94 percent. Appropriate information requests fell by the same 14.06 points. Conflict routing rose from 11.46 to 13.54 percent. Across all evidence states, rationale accuracy was 41.15 percent and independent accuracy was 38.67 percent. Fully grounded correctness moved in the other direction, from 27.34 percent to 26.17 percent. Schema validity improved from 79.30 to 87.11 percent, while evidence correctness fell from 79.04 to 73.96 percent.
+
+Independent-review accuracy was only 9.38 percent on invalid records, and appropriate conflict routing was 11.46 percent. These floor effects make the deltas unsuitable as evidence of task capability at this model scale. They still show which wrong action appeared. The same exposure can improve the target label in one state and increase a consequential error in another.
+
+\subsection{The earlier slice pointed in the same direction}
+
+The exploratory 12-case slice had zero independent-review accuracy across 96 reviews. Rationale exposure raised accuracy to 10.42\%, driven by Phi, while fully grounded accuracy remained zero. False eligibility rose from 50.00\% to 57.29\%. That result motivated the larger experiment above. It is not pooled with the new data.
+
+\subsection{The exploratory workflows did not supply a prompt fix}
+
+The evidence checklist changed overall accuracy by $-0.91$ points relative to prior-rationale review, with an interval from $-2.73$ to 0.91. Commit-first review changed 194 of 768 answers. Fifty-six changes corrected an error and 50 damaged a correct answer. Overall accuracy fell by 7.55 points, while false eligibility on invalid evidence rose by 10.42 points. Across the wider grid, the two surface forms produced different dispositions in 24.54\% of matched comparisons. The artifact reports each model and workflow separately.
+
+\section{Accountability requirement for humanitarian review}
+
+The matched sources make admissibility the headline. Qwen and Gemma ignore whether C2 accepts the source. Phi routes many valid and invalid cases away from a decision. Mistral usually distinguishes source classes, yet calls an unlisted record missing information. Each behavior requires a different repair.
+
+The exact disposition determines the procedure recommended inside this policy. A request for information seeks another record. An ineligible decision exposes the source-rule rejection, while human review invokes an accountable route. A real service may choose another mapping. Binary acceptance would hide these differences.
+
+The earlier rationale has no evidentiary status in the fictional policy, yet changes source discrimination. For Mistral, valid-source sensitivity reaches 100\% while unlisted-source specificity falls to 58.3\%. Phi moves in the opposite direction on valid controls. This effect remains artifact-specific.
+
+An invalid-only test rewards a constant rejector, while a valid-only test rewards a constant acceptor. A useful audit pairs both source classes and keeps the four-way disposition. It also varies prompt order when order is absent from the decision rule.
+
+The workflow comparisons give no simple prompt fix. The checklist had no reliable overall gain, and prior commitment made performance worse. These findings apply to the exact prompts and model revisions in the study.
+
+The source-validity concern would weaken if stronger reviewers accepted the matched valid records while rejecting plausible unlisted sources with the C2 disposition and evidence. A replication in which broader source wording removed the error would locate it in the present templates. The rationale effect would fail if repeated runs removed Mistral's false-eligibility increase.
+
+For peace and humanitarian work, this yields a concrete procedural requirement. New evidence must remain able to change the record that reaches an accountable reviewer. Before prior case reasoning enters a model, the organization should show that it does not suppress requests for missing evidence or redirect cases into unacceptable dispositions. The test should be repeated across prompt order and each model revision in use. Passing that audit still cannot replace an accessible complaint mechanism or determine whether remedy arrives in time.
+
+\section{Limits and ethical use}
+
+The benchmark is in English and uses short templates. Repeated wording may cue models. The two surface orders test one wording change. Translation and longer histories remain outside scope. Four selected source types cannot represent open-ended document variation.
+
+The fictional workflows avoid direct allocation decisions, which narrows ecological validity. Real services have local rules. Affected people may lack accepted evidence or face danger when using a complaint channel. Those conditions do not appear here. The study covers four local models with greedy four-bit decoding. It does not represent proprietary systems or larger reasoning models.
+
+Exact labels reproduce scores, not policy legitimacy. AppealShift is an audit fixture and must never adjudicate requests or rank people. Real use requires accountable human review and an accessible remedy channel.
+
+No human participant or private record was used. Every case comes from a fictional template. The score-blind packet has no external labels, so no completed human annotation study is claimed.
+
+\paragraph{Reproducibility.} Code, data, protocol records, raw outputs and audits are public at \url{https://github.com/xyz-rafael-xyz/appealshift-neurips-2026}. The public history does not establish the protocol chronology. The matched grid passed coverage and scorer-agreement checks. A separate program reproduced all 1,080 earlier-grid claims. The form and paper use the same abstract.
+
+\clearpage
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\appendix
+\clearpage
+
+\section{Model revisions}
+
+\begin{table}[h]
+\caption{Local model artifacts used in every reported run.}
+\centering
+\small
+\begin{tabular}{p{0.21\linewidth}p{0.38\linewidth}p{0.29\linewidth}}
+\toprule
+Model & Repository & Revision \\
+\midrule
+Qwen3 4B & \texttt{mlx-community/}\newline\texttt{Qwen3-4B-Instruct-}\newline\texttt{2507-4bit} & \texttt{50d427756c6b1b2fe0c0}\newline\texttt{a10f67fbda1fc8e82c1b} \\
+Phi-4-mini & \texttt{mlx-community/}\newline\texttt{Phi-4-mini-instruct-}\newline\texttt{mlx-4Bit} & \texttt{d848c30f6d5419b98924}\newline\texttt{33cf6b1062626d15340e} \\
+Gemma 3 4B & \texttt{mlx-community/}\newline\texttt{gemma-3-text-4b-it-}\newline\texttt{4bit} & \texttt{4f665a4c50ecfe4ecdc3}\newline\texttt{4056ab52fe3e3c4abf9e} \\
+Mistral 7B & \texttt{mlx-community/}\newline\texttt{Mistral-7B-Instruct-}\newline\texttt{v0.3-4bit} & \texttt{a4b8f870474b0eb527f4}\newline\texttt{66a03fbc187830d271f5} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Dataset balance}
+
+Each of the eight service families contributes three semantic cases to each target disposition. This creates 12 semantic cases per family and 96 in total. Each semantic case has two surface forms. Seventy-two cases have one decisive evidence identifier. The 24 conflict cases require two.
+
+\begin{flushleft}
+The evaluation file has SHA256 \texttt{5a7a74533c614dcdd244003bf9411d88}\allowbreak\texttt{3237daac818731625d3229ea4c7ee9cf}.
+
+The development file has SHA256 \texttt{551e1040dbe6d6fd9f365d4267115eb1}\allowbreak\texttt{24fa2a7a6a2c2740b728de5554038a24}.
+\end{flushleft}
+
+\section{Validation record}
+
+The full-run validator checks prompt reconstruction and exact model revisions. It then checks dataset hashes and row coverage. Score agreement has a separate check. The independent result checker reads raw JSONL without importing the main analysis. It passed 1,080 of 1,080 checks. Eight final outputs were unparseable under the declared recovery parser. No record was removed.
+
+The archive also contains a 384-record score-blind audit packet selected across 128 strata using identifiers only. It is included for later external review. Its status remains unlabelled, and no paper claim treats it as a human audit.
+
+\end{document}

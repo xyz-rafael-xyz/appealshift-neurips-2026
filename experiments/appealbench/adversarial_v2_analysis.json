@@ -1,0 +1,267 @@
+{
+  "analysis_kind": "prospectively frozen plausible-source v2",
+  "by_condition": [
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "independent_review",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 0.515625,
+      "fully_grounded_rate": 0.0,
+      "n": 384
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.0625,
+      "false_eligibility_rate": 0.6041666666666666,
+      "fully_grounded_rate": 0.0,
+      "n": 384
+    }
+  ],
+  "by_model_condition": [
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "independent_review",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 1.0,
+      "fully_grounded_rate": 0.0,
+      "model": "Gemma-3-4B",
+      "n": 96
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 1.0,
+      "fully_grounded_rate": 0.0,
+      "model": "Gemma-3-4B",
+      "n": 96
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "independent_review",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 0.0625,
+      "fully_grounded_rate": 0.0,
+      "model": "Mistral-7B",
+      "n": 96
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 0.4166666666666667,
+      "fully_grounded_rate": 0.0,
+      "model": "Mistral-7B",
+      "n": 96
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "independent_review",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 0.0,
+      "fully_grounded_rate": 0.0,
+      "model": "Phi-4-mini",
+      "n": 96
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.25,
+      "false_eligibility_rate": 0.0,
+      "fully_grounded_rate": 0.0,
+      "model": "Phi-4-mini",
+      "n": 96
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "independent_review",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 1.0,
+      "fully_grounded_rate": 0.0,
+      "model": "Qwen3-4B",
+      "n": 96
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 1.0,
+      "fully_grounded_rate": 0.0,
+      "model": "Qwen3-4B",
+      "n": 96
+    }
+  ],
+  "by_source_condition": [
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "independent_review",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 0.5,
+      "fully_grounded_rate": 0.0,
+      "n": 96,
+      "source_variant": "coordination_digest"
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.0625,
+      "false_eligibility_rate": 0.59375,
+      "fully_grounded_rate": 0.0,
+      "n": 96,
+      "source_variant": "coordination_digest"
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "independent_review",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 0.5625,
+      "fully_grounded_rate": 0.0,
+      "n": 96,
+      "source_variant": "forwarded_screenshot"
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.041666666666666664,
+      "false_eligibility_rate": 0.625,
+      "fully_grounded_rate": 0.0,
+      "n": 96,
+      "source_variant": "forwarded_screenshot"
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "independent_review",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 0.5,
+      "fully_grounded_rate": 0.0,
+      "n": 96,
+      "source_variant": "portal_export"
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.0625,
+      "false_eligibility_rate": 0.5625,
+      "fully_grounded_rate": 0.0,
+      "n": 96,
+      "source_variant": "portal_export"
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "independent_review",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 0.5,
+      "fully_grounded_rate": 0.0,
+      "n": 96,
+      "source_variant": "staff_chat"
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.08333333333333333,
+      "false_eligibility_rate": 0.6354166666666666,
+      "fully_grounded_rate": 0.0,
+      "n": 96,
+      "source_variant": "staff_chat"
+    }
+  ],
+  "by_surface_condition": [
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "independent_review",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 0.5,
+      "fully_grounded_rate": 0.0,
+      "n": 192,
+      "surface_form": "policy_first"
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.036458333333333336,
+      "false_eligibility_rate": 0.5104166666666666,
+      "fully_grounded_rate": 0.0,
+      "n": 192,
+      "surface_form": "policy_first"
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "independent_review",
+      "disposition_accuracy": 0.0,
+      "false_eligibility_rate": 0.53125,
+      "fully_grounded_rate": 0.0,
+      "n": 192,
+      "surface_form": "record_first"
+    },
+    {
+      "appropriate_information_request_rate": 0.0,
+      "condition": "prior_rationale",
+      "disposition_accuracy": 0.08854166666666667,
+      "false_eligibility_rate": 0.6979166666666666,
+      "fully_grounded_rate": 0.0,
+      "n": 192,
+      "surface_form": "record_first"
+    }
+  ],
+  "dataset_sha256": "ee78160188f0dfc64ab77d38efa62fb704c2e0a3621ecd6e3692c863b5097a6b",
+  "models": [
+    "Gemma-3-4B",
+    "Mistral-7B",
+    "Phi-4-mini",
+    "Qwen3-4B"
+  ],
+  "overall": {
+    "appropriate_information_request_rate": 0.0,
+    "disposition_accuracy": 0.03125,
+    "false_eligibility_rate": 0.5598958333333334,
+    "fully_grounded_rate": 0.0,
+    "n": 768
+  },
+  "paired_condition_effects": {
+    "disposition_correct": {
+      "bootstrap_resamples": 20000,
+      "bootstrap_seed": 20260824,
+      "ci95": [
+        0.0390625,
+        0.08854166666666667
+      ],
+      "clustering_note": "The descriptive bootstrap resamples paired model-case-surface effects; fixed model artifacts are not a population sample.",
+      "metric": "disposition_correct",
+      "n_paired_model_case_surfaces": 384,
+      "prior_minus_independent": 0.0625
+    },
+    "false_eligibility": {
+      "bootstrap_resamples": 20000,
+      "bootstrap_seed": 20260824,
+      "ci95": [
+        0.059895833333333336,
+        0.1171875
+      ],
+      "clustering_note": "The descriptive bootstrap resamples paired model-case-surface effects; fixed model artifacts are not a population sample.",
+      "metric": "false_eligibility",
+      "n_paired_model_case_surfaces": 384,
+      "prior_minus_independent": 0.08854166666666667
+    },
+    "fully_grounded": {
+      "bootstrap_resamples": 20000,
+      "bootstrap_seed": 20260824,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "clustering_note": "The descriptive bootstrap resamples paired model-case-surface effects; fixed model artifacts are not a population sample.",
+      "metric": "fully_grounded",
+      "n_paired_model_case_surfaces": 384,
+      "prior_minus_independent": 0.0
+    }
+  },
+  "records": 768,
+  "run_sha256": {
+    "experiments/appealbench/adversarial_v2/gemma3.jsonl": "efeac181d78f0f305b163c26793421726376b569a247da02f34d75aee3bfc4ce",
+    "experiments/appealbench/adversarial_v2/mistral7b.jsonl": "5aeb86d1ead82dd5936877061c83e861b142818da81bc7d5965dfdbc29632774",
+    "experiments/appealbench/adversarial_v2/phi4mini.jsonl": "58aad5be20f36c0f3dd18d69b148e8a6a2aa6f57c8cd6c05dc81373d9a6d8a03",
+    "experiments/appealbench/adversarial_v2/qwen3.jsonl": "ce1a92e3b9320572f8786fd5e4d963ec1b3409fa0ae80da6956ab22f63cdc77e"
+  },
+  "semantic_cases": 48
+}

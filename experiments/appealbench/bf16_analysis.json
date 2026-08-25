@@ -1,0 +1,106 @@
+{
+  "contrasts": [
+    {
+      "family": "Gemma-3-4B",
+      "precision": "4bit",
+      "rationale_minus_independent": 0
+    },
+    {
+      "family": "Gemma-3-4B",
+      "precision": "bf16",
+      "rationale_minus_independent": 0
+    },
+    {
+      "family": "Qwen3-4B",
+      "precision": "4bit",
+      "rationale_minus_independent": 0
+    },
+    {
+      "family": "Qwen3-4B",
+      "precision": "bf16",
+      "rationale_minus_independent": 0
+    }
+  ],
+  "records": 384,
+  "source_hashes": {
+    "experiments/appealbench/bf16/gemma3.jsonl": "6d9d95f4d60b625f80a6e2651b7b2ce2c60148e08705b8286ca5cdae01655190",
+    "experiments/appealbench/bf16/qwen3.jsonl": "36bd734bbb84c340cc0a19f6597e31fef54c5e64120b2e00420fac19c4d78e82",
+    "experiments/appealbench/full/gemma3.jsonl": "97aac76b31ad8809661ab57921188b89d81296fe521fa391f51a8223c596d0fa",
+    "experiments/appealbench/full/qwen3.jsonl": "f7d0398603b5c0d4f97c7587fa4b2492044707f99512e966acfc008f6713d86a"
+  },
+  "status": "same_model_precision_replication",
+  "summaries": [
+    {
+      "condition": "independent_review",
+      "disposition_accuracy": 1,
+      "family": "Gemma-3-4B",
+      "fully_grounded": 1,
+      "n": 48,
+      "precision": "4bit",
+      "schema_valid": 1
+    },
+    {
+      "condition": "prior_rationale",
+      "disposition_accuracy": 1,
+      "family": "Gemma-3-4B",
+      "fully_grounded": 1,
+      "n": 48,
+      "precision": "4bit",
+      "schema_valid": 1
+    },
+    {
+      "condition": "independent_review",
+      "disposition_accuracy": 1,
+      "family": "Gemma-3-4B",
+      "fully_grounded": 1,
+      "n": 48,
+      "precision": "bf16",
+      "schema_valid": 1
+    },
+    {
+      "condition": "prior_rationale",
+      "disposition_accuracy": 1,
+      "family": "Gemma-3-4B",
+      "fully_grounded": 1,
+      "n": 48,
+      "precision": "bf16",
+      "schema_valid": 1
+    },
+    {
+      "condition": "independent_review",
+      "disposition_accuracy": 1,
+      "family": "Qwen3-4B",
+      "fully_grounded": 1,
+      "n": 48,
+      "precision": "4bit",
+      "schema_valid": 1
+    },
+    {
+      "condition": "prior_rationale",
+      "disposition_accuracy": 1,
+      "family": "Qwen3-4B",
+      "fully_grounded": 1,
+      "n": 48,
+      "precision": "4bit",
+      "schema_valid": 1
+    },
+    {
+      "condition": "independent_review",
+      "disposition_accuracy": 1,
+      "family": "Qwen3-4B",
+      "fully_grounded": 1,
+      "n": 48,
+      "precision": "bf16",
+      "schema_valid": 1
+    },
+    {
+      "condition": "prior_rationale",
+      "disposition_accuracy": 1,
+      "family": "Qwen3-4B",
+      "fully_grounded": 1,
+      "n": 48,
+      "precision": "bf16",
+      "schema_valid": 1
+    }
+  ]
+}

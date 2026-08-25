@@ -1,0 +1,86 @@
+{
+  "audited_count": 5,
+  "candidate_count": 24,
+  "cases": [
+    {
+      "clause_mismatch": true,
+      "evidence_mismatch": false,
+      "expected_clause": "C2",
+      "expected_disposition": "INELIGIBLE",
+      "expected_evidence_ids": [
+        "E1"
+      ],
+      "predicted_clause": "C1",
+      "predicted_disposition": "INELIGIBLE",
+      "predicted_evidence_ids": [
+        "E1"
+      ],
+      "raw_output": "```json\n{\"disposition\":\"INELIGIBLE\",\"policy_clause\":\"C1\",\"evidence_ids\":[\"E1\"],\"reply\":\"short service-user-facing explanation\"}\n```",
+      "variant_id": "adv2-complaint_callback-invalid-1-3--policy_first"
+    },
+    {
+      "clause_mismatch": true,
+      "evidence_mismatch": true,
+      "expected_clause": "C2",
+      "expected_disposition": "INELIGIBLE",
+      "expected_evidence_ids": [
+        "E1"
+      ],
+      "predicted_clause": "C4",
+      "predicted_disposition": "INELIGIBLE",
+      "predicted_evidence_ids": [],
+      "raw_output": "```json\n{\"disposition\":\"INELIGIBLE\",\"policy_clause\":\"C4\",\"evidence_ids\":[],\"reply\":\"The current accepted records conflict on the presence of a complaint reference identifier. This case is sent to a human reviewer for further evaluation as per policy C4.\"}\n```",
+      "variant_id": "adv2-complaint_callback-invalid-1-4--record_first"
+    },
+    {
+      "clause_mismatch": true,
+      "evidence_mismatch": false,
+      "expected_clause": "C2",
+      "expected_disposition": "INELIGIBLE",
+      "expected_evidence_ids": [
+        "E1"
+      ],
+      "predicted_clause": "C4",
+      "predicted_disposition": "INELIGIBLE",
+      "predicted_evidence_ids": [
+        "E1"
+      ],
+      "raw_output": "```json\n{\"disposition\":\"INELIGIBLE\",\"policy_clause\":\"C4\",\"evidence_ids\":[\"E1\"]}\n```",
+      "variant_id": "adv2-complaint_callback-invalid-2-2--record_first"
+    },
+    {
+      "clause_mismatch": true,
+      "evidence_mismatch": false,
+      "expected_clause": "C2",
+      "expected_disposition": "INELIGIBLE",
+      "expected_evidence_ids": [
+        "E1"
+      ],
+      "predicted_clause": "C3",
+      "predicted_disposition": "INELIGIBLE",
+      "predicted_evidence_ids": [
+        "E1"
+      ],
+      "raw_output": "```json\n{\"disposition\":\"INELIGIBLE\",\"policy_clause\":\"C3\",\"evidence_ids\":[\"E1\"],\"reply\":\"short service-user-facing explanation\"}\n```",
+      "variant_id": "adv2-complaint_callback-invalid-2-3--policy_first"
+    },
+    {
+      "clause_mismatch": true,
+      "evidence_mismatch": false,
+      "expected_clause": "C2",
+      "expected_disposition": "INELIGIBLE",
+      "expected_evidence_ids": [
+        "E1"
+      ],
+      "predicted_clause": "C3",
+      "predicted_disposition": "INELIGIBLE",
+      "predicted_evidence_ids": [
+        "E1"
+      ],
+      "raw_output": "```json\n{\"disposition\":\"INELIGIBLE\",\"policy_clause\":\"C3\",\"evidence_ids\":[\"E1\"],\"reply\":\"short service-user-facing explanation\"}\n```",
+      "variant_id": "adv2-complaint_callback-invalid-3-2--record_first"
+    }
+  ],
+  "finding": "All five outputs give the correct INELIGIBLE disposition but cite C1, C3, or C4 instead of C2. One also omits the required E1 identifier. The zero fully-grounded score is substantive in this sample, not a formatting artifact.",
+  "selection": "first five candidates sorted by case_id and surface_form"
+}

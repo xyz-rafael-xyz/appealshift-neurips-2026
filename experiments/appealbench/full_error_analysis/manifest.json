@@ -1,0 +1,24 @@
+{
+  "confusion_rows": 114,
+  "paired_change_rows": 577,
+  "records": 3072,
+  "run_files": [
+    {
+      "path": "experiments/appealbench/full/qwen3.jsonl",
+      "sha256": "f7d0398603b5c0d4f97c7587fa4b2492044707f99512e966acfc008f6713d86a"
+    },
+    {
+      "path": "experiments/appealbench/full/phi4mini.jsonl",
+      "sha256": "5af9e83293a73c5042b71092bb8faad91ee3b73fff4d16987a3ffd398a3bc060"
+    },
+    {
+      "path": "experiments/appealbench/full/gemma3.jsonl",
+      "sha256": "97aac76b31ad8809661ab57921188b89d81296fe521fa391f51a8223c596d0fa"
+    },
+    {
+      "path": "experiments/appealbench/full/mistral7b.jsonl",
+      "sha256": "1afed71210e13543832500a3d2076f6da61a753d4fff27cad8f35c6c3cc96348"
+    }
+  ],
+  "surface_disagreement_rows": 377
+}
