@@ -57,3 +57,7 @@ Prior work establishes appeal prediction and rationale effects. AppealShift uses
 ## License
 
 Code is released under the MIT License. The synthetic data and documentation are released under CC BY 4.0. The manuscript remains under the author's copyright.
+
+## Fixture lineage
+
+A source audit found no appeal item or saved model review reused elsewhere. Similar service families are topic overlap.

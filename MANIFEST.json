@@ -16,9 +16,9 @@
       "sha256": "84e227ba0fa201b3545567cb713c3efbd478ff2f9dc141add6365524645940e9"
     },
     {
-      "bytes": 4159,
+      "bytes": 4300,
       "path": "README.md",
-      "sha256": "07ccac822cd7be738988104a7c889dcfb3209831ec65645516abd64b55888982"
+      "sha256": "c7619f68a95464431ac65c192b28f245a5666c21e90200a7261fb66020af126c"
     },
     {
       "bytes": 54288,
@@ -261,9 +261,9 @@
       "sha256": "9bab37b8ba7d54230463e7cbd589ce6696064e7fe49155df4084470dba1c2bc0"
     },
     {
-      "bytes": 74795,
+      "bytes": 74930,
       "path": "paper.pdf",
-      "sha256": "168048b5024989c6f4fff6f84301e0db4997a1a453bd46269f97271fec1923da"
+      "sha256": "21ae1c8d16d4de41d511ba4e625b371ac3ee3d9f4bde3740cd40ecca37afa83b"
     },
     {
       "bytes": 2173,
@@ -271,9 +271,9 @@
       "sha256": "3c1326ba0224940006e86e762a831e99e331132dde6bb94a229959bc602373ca"
     },
     {
-      "bytes": 34581,
+      "bytes": 34713,
       "path": "papers/appealshift/paper.tex",
-      "sha256": "af6d3dfff20ce811652451e44106ff796648e84c38c0005dd173c091ebdbc6db"
+      "sha256": "23ccdecd863e45371f3d728bba7a8b9cb67164c6b59fc480b1e7f36369ffbd72"
     },
     {
       "bytes": 6074,
@@ -361,9 +361,9 @@
       "sha256": "ef2053bc1c7d427ad9d85f7e09c14e97dc11f2614fd9ff4f5981163c7a4bc2c4"
     },
     {
-      "bytes": 4931,
+      "bytes": 5076,
       "path": "scripts/appealbench/audit_manuscript.py",
-      "sha256": "36e987ccafe6d5eec15791be7c7b6791371cd8bbd5411abacfe85a9ac5965675"
+      "sha256": "15cb59be89f3d14bd3e7b7c91d27fb20663fa3399272fa1a70bd196d13d5eff0"
     },
     {
       "bytes": 3112,

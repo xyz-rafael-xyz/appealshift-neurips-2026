@@ -94,6 +94,9 @@ def main() -> None:
         required["reproducibility_timing_boundary"] = (
             "The public history does not establish the protocol chronology."
         )
+        required["fixture_lineage_rule"] = (
+            "A source audit found no appeal item or saved model review reused elsewhere."
+        )
     missing = [name for name, literal in required.items() if literal not in text]
 
     if args.abstract and r"\bibliography" in text:
