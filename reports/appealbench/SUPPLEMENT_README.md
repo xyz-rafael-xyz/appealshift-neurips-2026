@@ -11,10 +11,10 @@ This archive supports the AI for Peace submission `Matched Sources Expose Distin
 - `experiments/appealbench/full/` contains the four complete evaluation runs.
 - `experiments/appealbench/full_analysis/` contains the frozen result tables.
 - `experiments/appealbench/full_error_analysis/` contains confusion and paired-transition tables.
-- `experiments/appealbench/adversarial_v2/` contains the 768 primary decisions.
+- `experiments/appealbench/adversarial_v2/` contains the 768 primary decisions. This directory is the plausible-source experiment named in the paper.
 - `experiments/appealbench/adversarial_v2_analysis.json` contains the primary source, surface, model, and condition results.
 - `experiments/appealbench/matched_valid_controls/` contains the 384 accepted-source reviews and the supplied control protocol. The public artifact history does not establish the protocol's timing.
-- `experiments/appealbench/source_discrimination_analysis.json` contains the matched source cells, disposition matrix and 12-base-request bootstrap.
+- `experiments/appealbench/source_discrimination_analysis.json` contains the matched source cells, disposition matrix, 12-base-request bootstrap and protocol-specified 48-semantic-case sensitivity analysis.
 - `validation/appealbench/` contains dataset, run, claim, and package checks.
 - `scripts/appealbench/` contains generation, scoring, analysis, plotting, and validation code.
 - `reports/appealbench/EXPERIMENT_PROTOCOL.md` records the design and development amendment.
@@ -84,7 +84,7 @@ python scripts/appealbench/analyze_source_discrimination.py \
   --valid-runs experiments/appealbench/matched_valid_controls/*.jsonl
 ```
 
-The accepted-source dataset digest is `103cd2bd2a2d1430d27b0f4a48753491a65d1850772d19f05940cdb94dc5eb2c`. The joint analysis requires 768 invalid-source and 384 accepted-source reviews. Its invalid-source interval clusters on the 12 base requests with seed `20260825` and 20,000 samples.
+The accepted-source dataset digest is `103cd2bd2a2d1430d27b0f4a48753491a65d1850772d19f05940cdb94dc5eb2c`. The joint analysis requires 768 invalid-source and 384 accepted-source reviews. Its reported invalid-source interval clusters on the 12 base requests with seed `20260825` and 20,000 samples. The same output retains the protocol-specified 48-semantic-case sensitivity interval.
 
 ## Analysis
 

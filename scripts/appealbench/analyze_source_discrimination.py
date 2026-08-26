@@ -97,6 +97,35 @@ def clustered_invalid_effect(rows: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
+def clustered_invalid_effect_by_semantic_case(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    """Reproduce the 48-case clustering unit named in the 24 August protocol."""
+    pairs: dict[tuple[str, str, str], dict[str, int]] = defaultdict(dict)
+    for row in rows:
+        key = (str(row["model"]), str(row["case_id"]), str(row["surface_form"]))
+        pairs[key][str(row["condition"])] = int(row["false_eligibility"])
+    effects_by_case: dict[str, list[int]] = defaultdict(list)
+    for (model, case_id, surface), pair in pairs.items():
+        if {"independent_review", "prior_rationale"} <= set(pair):
+            effects_by_case[case_id].append(
+                pair["prior_rationale"] - pair["independent_review"]
+            )
+    case_effects = {key: statistics.fmean(values) for key, values in sorted(effects_by_case.items())}
+    if len(case_effects) != 48 or any(len(effects_by_case[key]) != 8 for key in effects_by_case):
+        raise ValueError("expected 48 semantic-case clusters with 8 model-surface effects each")
+    values = list(case_effects.values())
+    rng = random.Random(SEED)
+    boot = [statistics.fmean(rng.choice(values) for _ in range(48)) for _ in range(RESAMPLES)]
+    return {
+        "n_semantic_case_clusters": 48,
+        "effects_per_cluster": 8,
+        "prior_minus_independent": statistics.fmean(values),
+        "ci95": [quantile(boot, 0.025), quantile(boot, 0.975)],
+        "seed": SEED,
+        "resamples": RESAMPLES,
+        "semantic_case_effects": case_effects,
+    }
+
+
 def joint_cells(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     groups: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
     for row in rows:
@@ -166,6 +195,7 @@ def main() -> None:
         "joint_model_condition": joint_cells(rows),
         "confusion": confusion(rows),
         "invalid_false_eligibility_clustered_by_base_request": clustered_invalid_effect(invalid),
+        "invalid_false_eligibility_clustered_by_semantic_case": clustered_invalid_effect_by_semantic_case(invalid),
         "run_sha256": {
             str(path): hashlib.sha256(path.read_bytes()).hexdigest()
             for path in [*args.invalid_runs, *args.valid_runs]

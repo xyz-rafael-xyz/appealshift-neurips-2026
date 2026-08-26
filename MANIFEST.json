@@ -16,9 +16,9 @@
       "sha256": "84e227ba0fa201b3545567cb713c3efbd478ff2f9dc141add6365524645940e9"
     },
     {
-      "bytes": 4300,
+      "bytes": 4314,
       "path": "README.md",
-      "sha256": "c7619f68a95464431ac65c192b28f245a5666c21e90200a7261fb66020af126c"
+      "sha256": "aa11977e481b8af6fc0b362ba537b2dff48225feb2cb3a053a5abdac2ec4bb99"
     },
     {
       "bytes": 54288,
@@ -256,14 +256,14 @@
       "sha256": "3e6502fd8c34e3337617bca9ece1ddbcdd14f969c4d13a445615ade3db9870d8"
     },
     {
-      "bytes": 21024,
+      "bytes": 23767,
       "path": "experiments/appealbench/source_discrimination_analysis.json",
-      "sha256": "9bab37b8ba7d54230463e7cbd589ce6696064e7fe49155df4084470dba1c2bc0"
+      "sha256": "2d28f792ba4cbffb6cffb57469592807e7e532deee0c5732a8dedfd726013bab"
     },
     {
-      "bytes": 74930,
+      "bytes": 75195,
       "path": "paper.pdf",
-      "sha256": "21ae1c8d16d4de41d511ba4e625b371ac3ee3d9f4bde3740cd40ecca37afa83b"
+      "sha256": "500de858c22115d592f0dfac265ad48cc297d18df9d7306f0790fc7480f86a4d"
     },
     {
       "bytes": 2173,
@@ -271,9 +271,9 @@
       "sha256": "3c1326ba0224940006e86e762a831e99e331132dde6bb94a229959bc602373ca"
     },
     {
-      "bytes": 34713,
+      "bytes": 35077,
       "path": "papers/appealshift/paper.tex",
-      "sha256": "23ccdecd863e45371f3d728bba7a8b9cb67164c6b59fc480b1e7f36369ffbd72"
+      "sha256": "aef70e3da4db9a7cd45767bac0b8b0c0db7241051489edcd1946efabaa56c4a7"
     },
     {
       "bytes": 6074,
@@ -296,9 +296,9 @@
       "sha256": "472aa3eb92ce02e62acaaee169e6314aaacf198cc6b03839a14e220a36565583"
     },
     {
-      "bytes": 12853,
+      "bytes": 13116,
       "path": "reports/appealbench/FULL_RESULTS.md",
-      "sha256": "008d79f6c2dac555c02f678a24fa4e097126362e258535757860cafc438a392c"
+      "sha256": "9bbe7c704d7534904bc6987b9a13a9b7a06a5f9e02fc0fbb433ba7f3159a99b3"
     },
     {
       "bytes": 3443,
@@ -311,19 +311,19 @@
       "sha256": "3d85f2316baba7205319fcaa87c4b75443e7fc71c06eb391f079c4c20a59a758"
     },
     {
-      "bytes": 4489,
+      "bytes": 4552,
       "path": "reports/appealbench/RESULT_CLAIM_AUDIT.md",
-      "sha256": "13523bcafb2160af251bb355aec06c3b116560b4246a59a72fe6026ab95f71ac"
+      "sha256": "6ae583ad355ab355df5e65ae5be7223df1944ff5532f111ecb8bfe509c2ea14b"
     },
     {
-      "bytes": 8237,
+      "bytes": 8460,
       "path": "reports/appealbench/SUPPLEMENT_README.md",
-      "sha256": "da5ec37bd1b9fe981da553ddbb07b5b03d8f6f520e3d07fdccef1ce1f9aae74f"
+      "sha256": "e072dbe1eb51b26f9a7b775a0b8ac02b11b9b666a3f80b05e67c059a68289af8"
     },
     {
-      "bytes": 24869,
+      "bytes": 25176,
       "path": "reports/appealbench/TECHNICAL_REPORT.md",
-      "sha256": "ad5b20f102a361c4885e5a9a05fda3daeda00bf9943371eb4dd1a16af344e93a"
+      "sha256": "4259128d674fe948ed5da3f284e638de46179dd77e98751704c886f28c6279ce"
     },
     {
       "bytes": 5796,
@@ -356,9 +356,9 @@
       "sha256": "f08e9ae123f57790aaed88221bb17d111a2fc02a6210c9341461915d653344ab"
     },
     {
-      "bytes": 7629,
+      "bytes": 9268,
       "path": "scripts/appealbench/analyze_source_discrimination.py",
-      "sha256": "ef2053bc1c7d427ad9d85f7e09c14e97dc11f2614fd9ff4f5981163c7a4bc2c4"
+      "sha256": "24bf97855d87fcae5f9fe18faa3f9c5f9baf6f0c36c678be38939e4e64560280"
     },
     {
       "bytes": 5076,

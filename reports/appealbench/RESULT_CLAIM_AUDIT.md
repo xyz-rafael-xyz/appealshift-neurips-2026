@@ -12,7 +12,7 @@ Every quantitative statement in the form abstract and technical report must appe
 | Fully grounded accuracy is zero in both conditions | Deterministic clause and evidence checks over all 768 decisions |
 | Independent false eligibility is 51.56 percent | 198 of 384 independent decisions |
 | Prior-rationale false eligibility is 60.42 percent | 232 of 384 prior-rationale decisions |
-| The paired false-eligibility increase is 8.85 points | 20,000 descriptive resamples clustered on 12 base requests, interval 7.29 to 10.42 |
+| The paired false-eligibility increase is 8.85 points | 20,000 descriptive resamples clustered on 12 base requests, interval 7.29 to 10.42; protocol-specified 48-case sensitivity interval 7.03 to 10.68 |
 | Qwen and Gemma are constant acceptors | 48 of 48 matched valid and 96 of 96 unlisted records marked eligible by each model |
 | Mistral balanced discrimination is 85.4 percent | 37 of 48 valid accepted and 90 of 96 unlisted not accepted |
 | Phi balanced discrimination is 75.0 percent | 24 of 48 valid accepted and all 96 unlisted not accepted |
