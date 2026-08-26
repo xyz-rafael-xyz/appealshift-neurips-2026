@@ -46,7 +46,7 @@ The analysis was run with Python 3.12.13, NumPy 2.5.2, pandas 3.0.5, SciPy 1.18.
 
 ## Result map
 
-The four files under `experiments/appealbench/adversarial_v2/` contain the 768 plausible-source decisions named in the paper. The matched accepted-source controls add 384 decisions under `experiments/appealbench/matched_valid_controls/`. Their joint analysis and disposition matrix are in `experiments/appealbench/source_discrimination_analysis.json`. The files under `experiments/appealbench/full/` contain the earlier four-state evaluation. Its paired analysis and leave-one-model-out table are under `experiments/appealbench/full_analysis/`. The twelve-case slice that motivated the primary extension is under `experiments/appealbench/adversarial/`. The same-model BF16 check is under `experiments/appealbench/bf16/`.
+The legacy directory name `experiments/appealbench/adversarial_v2/` maps to the paper's primary plausible-source experiment. Its four files contain 768 decisions. The matched accepted-source controls add 384 decisions under `experiments/appealbench/matched_valid_controls/`. Their joint analysis and disposition matrix are in `experiments/appealbench/source_discrimination_analysis.json`. The files under `experiments/appealbench/full/` contain the earlier four-state evaluation. Its paired analysis and leave-one-model-out table are under `experiments/appealbench/full_analysis/`. The twelve-case slice that motivated the primary extension is under `experiments/appealbench/adversarial/`. The same-model BF16 check is under `experiments/appealbench/bf16/`.
 
 All cases and organizations are fictional. The benchmark is meant for research on review procedures. It must not be used to decide access to services.
 
