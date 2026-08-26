@@ -109,6 +109,18 @@ def main() -> None:
     )
     if not twelve_cluster_caveat_present:
         errors.append("supporting paper is missing the 12-cluster interval caveat")
+    if not all(
+        value in paper_source
+        for value in (
+            "194 of 768 preliminary commitments",
+            "net gain of six correct decisions",
+            "from 316 to 258 decisions",
+            "26 corrections and 84 new errors",
+            "locally validated form payload supplied with the artifact",
+            "Submission through the live form remains an author action",
+        )
+    ):
+        errors.append("supporting paper is missing the baseline-separated workflow or live-form caveat")
 
     form = json.loads(args.form.read_text(encoding="utf-8"))
     source = args.abstract_source.read_text(encoding="utf-8")

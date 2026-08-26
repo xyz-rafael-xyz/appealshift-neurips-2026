@@ -261,9 +261,9 @@
       "sha256": "2d28f792ba4cbffb6cffb57469592807e7e532deee0c5732a8dedfd726013bab"
     },
     {
-      "bytes": 75195,
+      "bytes": 75381,
       "path": "paper.pdf",
-      "sha256": "500de858c22115d592f0dfac265ad48cc297d18df9d7306f0790fc7480f86a4d"
+      "sha256": "4a3e10f46077bda8c3e1bc0a45ef1d03ce5ce206e4f17176293a7aa93f7149a6"
     },
     {
       "bytes": 2173,
@@ -271,9 +271,9 @@
       "sha256": "3c1326ba0224940006e86e762a831e99e331132dde6bb94a229959bc602373ca"
     },
     {
-      "bytes": 35077,
+      "bytes": 35346,
       "path": "papers/appealshift/paper.tex",
-      "sha256": "aef70e3da4db9a7cd45767bac0b8b0c0db7241051489edcd1946efabaa56c4a7"
+      "sha256": "8a779ce3c9d94ca404ea64ab244f542208ce1a9fd00a6c421cf01b4ebd4d4e71"
     },
     {
       "bytes": 6074,
@@ -296,9 +296,9 @@
       "sha256": "472aa3eb92ce02e62acaaee169e6314aaacf198cc6b03839a14e220a36565583"
     },
     {
-      "bytes": 13116,
+      "bytes": 13376,
       "path": "reports/appealbench/FULL_RESULTS.md",
-      "sha256": "9bbe7c704d7534904bc6987b9a13a9b7a06a5f9e02fc0fbb433ba7f3159a99b3"
+      "sha256": "74828c0fc3f928f971f713500556bc4eae1b000d8d6685bd62fc84ca13d56ecb"
     },
     {
       "bytes": 3443,
@@ -311,9 +311,9 @@
       "sha256": "3d85f2316baba7205319fcaa87c4b75443e7fc71c06eb391f079c4c20a59a758"
     },
     {
-      "bytes": 4552,
+      "bytes": 4770,
       "path": "reports/appealbench/RESULT_CLAIM_AUDIT.md",
-      "sha256": "6ae583ad355ab355df5e65ae5be7223df1944ff5532f111ecb8bfe509c2ea14b"
+      "sha256": "5a29f3bbfe69770ba882f1233732cd3c74ff6ea591380af683d6c11adf4a1daf"
     },
     {
       "bytes": 8460,
@@ -321,9 +321,9 @@
       "sha256": "e072dbe1eb51b26f9a7b775a0b8ac02b11b9b666a3f80b05e67c059a68289af8"
     },
     {
-      "bytes": 25176,
+      "bytes": 25438,
       "path": "reports/appealbench/TECHNICAL_REPORT.md",
-      "sha256": "4259128d674fe948ed5da3f284e638de46179dd77e98751704c886f28c6279ce"
+      "sha256": "880b1c94c1355cd51c92e04f324fa030c6ed680c8c15ceb514fc1d39691bd07d"
     },
     {
       "bytes": 5796,
@@ -546,9 +546,9 @@
       "sha256": "e0dd2521025143d5ffaacfbffebf2f8f43cb0939b18e276866acc3360a603905"
     },
     {
-      "bytes": 6301,
+      "bytes": 6826,
       "path": "scripts/appealbench/validate_pdfs.py",
-      "sha256": "aec8a38a98dc4f8e0706a4c70e3160063372582da49c67810a42fe866f65d66e"
+      "sha256": "c8a4f596a5f3278d440bd18522589b473c5b4581a1035b42d1ef1508857688ba"
     },
     {
       "bytes": 15024,

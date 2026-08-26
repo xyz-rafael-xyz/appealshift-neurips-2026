@@ -110,7 +110,7 @@ The evidence checklist did not produce a reliable overall accuracy gain over pri
 
 The commit-first workflow was adverse. Overall accuracy fell by 7.55 points relative to prior-rationale review, with an interval from -10.03 to -4.95. Valid accuracy fell by 3.12 points, with an interval from -5.21 to -1.04. False eligibility on invalid evidence rose by 10.42 points. Its interval ran from +6.77 to +13.54.
 
-The final commit-first disposition differed from the preliminary answer in 194 of 768 reviews. Fifty-six changes were corrective under the target label. Fifty were harmful. The remaining changed answers moved between two incorrect dispositions. A preliminary commitment did not stabilize good reasoning in this setting.
+Within the commit-first condition, the final disposition differed from the preliminary answer in 194 of 768 reviews. Fifty-six changes were corrective under the target label. Fifty were harmful. The remaining 88 moved between two incorrect dispositions, so final review gained six correct answers over the preliminary commitments. The 7.55-point loss uses a different baseline. Prior-rationale final review had 316 correct answers and commit-first final review had 258. That matched comparison contains 26 corrections, 84 new errors and 59 changes between incorrect dispositions.
 
 ## Surface-order sensitivity
 

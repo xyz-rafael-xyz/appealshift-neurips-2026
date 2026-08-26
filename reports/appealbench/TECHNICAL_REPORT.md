@@ -128,7 +128,7 @@ Independent-review accuracy was only 9.38 percent on invalid records, and approp
 
 The evidence checklist changed overall accuracy by -0.91 points relative to prior-rationale review. Its interval ran from -2.73 to +0.91. Valid accuracy was unchanged at 90.62 percent. The checklist reduced false eligibility on invalid evidence by 2.08 points, though its interval included zero.
 
-Commit-first review changed 194 of 768 final dispositions. Fifty-six changes corrected an error, while 50 damaged a correct answer. The remaining changes moved between incorrect labels. Overall accuracy fell by 7.55 points, with an interval from -10.03 to -4.95. False eligibility on invalid evidence rose by 10.42 points, with an interval from +6.77 to +13.54.
+Within the commit-first condition, final review changed 194 of 768 preliminary commitments. Fifty-six changes corrected an error and 50 damaged a correct answer. The remaining 88 moved between incorrect labels, giving a net gain of six correct decisions over the preliminary commitments. Overall accuracy fell by 7.55 points against the separate prior-rationale final-review condition, from 316 to 258 correct decisions. That matched comparison contains 26 corrections, 84 new errors and 59 changes between incorrect labels. False eligibility on invalid evidence rose by 10.42 points, with an interval from +6.77 to +13.54.
 
 ### 5.5 Surface order remained consequential
 

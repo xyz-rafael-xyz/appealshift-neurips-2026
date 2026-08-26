@@ -33,7 +33,8 @@ Every quantitative statement in the form abstract and technical report must appe
 | Appropriate information requests fell on incomplete evidence | 50.00 percent independent and 35.94 percent with rationale exposure |
 | Invalid accuracy and conflict routing had floor effects | Independent baselines were 9.38 and 11.46 percent |
 | The checklist had no reliable overall gain | -0.91 points with interval -2.73 to +0.91 |
-| Commit-first review changed rather than stabilized decisions | 194 changes, containing 56 corrections and 50 damages |
+| Commit-first final review versus its preliminary commitments | 194 changes, containing 56 corrections, 50 damages and 88 wrong-to-wrong changes; net +6 correct |
+| Commit-first final review versus prior-rationale final review | 316 to 258 correct, with 26 corrections, 84 damages and 59 wrong-to-wrong changes; net -58 or -7.55 points |
 | Meaning-preserving order often changed the disposition | 377 of 1,536 paired comparisons |
 
 ## Claims excluded
