@@ -83,16 +83,9 @@ def main() -> None:
     }
     if not args.abstract:
         required["bibliography"] = r"\bibliography{references}"
-        required["artifact_timing_boundary"] = (
-            "The artifact includes the earlier analysis plan and seed. Its public history "
-            "does not establish their timing relative to evaluation generation."
-        )
-        required["primary_protocol_timing_boundary"] = (
-            "The released public artifact was assembled later and does not independently "
-            "establish that sequence."
-        )
         required["reproducibility_timing_boundary"] = (
-            "The public history does not establish the protocol chronology."
+            "The public history does not establish when any protocol or analysis plan "
+            "was written relative to generation."
         )
         required["fixture_lineage_rule"] = (
             "A source audit found no appeal item or saved model review reused elsewhere."

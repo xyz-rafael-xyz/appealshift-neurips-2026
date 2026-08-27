@@ -642,6 +642,112 @@
       "target": "INELIGIBLE"
     }
   ],
+  "invalid_false_eligibility_by_model_clustered_by_base_request": {
+    "Gemma-3-4B": {
+      "base_request_effects": {
+        "complaint_callback-invalid-1": 0.0,
+        "complaint_callback-invalid-2": 0.0,
+        "complaint_callback-invalid-3": 0.0,
+        "legal_information-invalid-1": 0.0,
+        "legal_information-invalid-2": 0.0,
+        "legal_information-invalid-3": 0.0,
+        "remote_checkin-invalid-1": 0.0,
+        "remote_checkin-invalid-2": 0.0,
+        "remote_checkin-invalid-3": 0.0,
+        "shelter_maintenance-invalid-1": 0.0,
+        "shelter_maintenance-invalid-2": 0.0,
+        "shelter_maintenance-invalid-3": 0.0
+      },
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "effects_per_cluster": 8,
+      "model": "Gemma-3-4B",
+      "n_base_request_clusters": 12,
+      "prior_minus_independent": 0.0,
+      "resamples": 20000,
+      "seed": 20260825
+    },
+    "Mistral-7B": {
+      "base_request_effects": {
+        "complaint_callback-invalid-1": 0.375,
+        "complaint_callback-invalid-2": 0.5,
+        "complaint_callback-invalid-3": 0.375,
+        "legal_information-invalid-1": 0.375,
+        "legal_information-invalid-2": 0.375,
+        "legal_information-invalid-3": 0.25,
+        "remote_checkin-invalid-1": 0.5,
+        "remote_checkin-invalid-2": 0.5,
+        "remote_checkin-invalid-3": 0.375,
+        "shelter_maintenance-invalid-1": 0.125,
+        "shelter_maintenance-invalid-2": 0.25,
+        "shelter_maintenance-invalid-3": 0.25
+      },
+      "ci95": [
+        0.2916666666666667,
+        0.4166666666666667
+      ],
+      "effects_per_cluster": 8,
+      "model": "Mistral-7B",
+      "n_base_request_clusters": 12,
+      "prior_minus_independent": 0.3541666666666667,
+      "resamples": 20000,
+      "seed": 20260825
+    },
+    "Phi-4-mini": {
+      "base_request_effects": {
+        "complaint_callback-invalid-1": 0.0,
+        "complaint_callback-invalid-2": 0.0,
+        "complaint_callback-invalid-3": 0.0,
+        "legal_information-invalid-1": 0.0,
+        "legal_information-invalid-2": 0.0,
+        "legal_information-invalid-3": 0.0,
+        "remote_checkin-invalid-1": 0.0,
+        "remote_checkin-invalid-2": 0.0,
+        "remote_checkin-invalid-3": 0.0,
+        "shelter_maintenance-invalid-1": 0.0,
+        "shelter_maintenance-invalid-2": 0.0,
+        "shelter_maintenance-invalid-3": 0.0
+      },
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "effects_per_cluster": 8,
+      "model": "Phi-4-mini",
+      "n_base_request_clusters": 12,
+      "prior_minus_independent": 0.0,
+      "resamples": 20000,
+      "seed": 20260825
+    },
+    "Qwen3-4B": {
+      "base_request_effects": {
+        "complaint_callback-invalid-1": 0.0,
+        "complaint_callback-invalid-2": 0.0,
+        "complaint_callback-invalid-3": 0.0,
+        "legal_information-invalid-1": 0.0,
+        "legal_information-invalid-2": 0.0,
+        "legal_information-invalid-3": 0.0,
+        "remote_checkin-invalid-1": 0.0,
+        "remote_checkin-invalid-2": 0.0,
+        "remote_checkin-invalid-3": 0.0,
+        "shelter_maintenance-invalid-1": 0.0,
+        "shelter_maintenance-invalid-2": 0.0,
+        "shelter_maintenance-invalid-3": 0.0
+      },
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "effects_per_cluster": 8,
+      "model": "Qwen3-4B",
+      "n_base_request_clusters": 12,
+      "prior_minus_independent": 0.0,
+      "resamples": 20000,
+      "seed": 20260825
+    }
+  },
   "invalid_false_eligibility_clustered_by_base_request": {
     "base_request_effects": {
       "complaint_callback-invalid-1": 0.09375,
@@ -662,6 +768,7 @@
       0.10416666666666667
     ],
     "effects_per_cluster": 32,
+    "model": "ALL",
     "n_base_request_clusters": 12,
     "prior_minus_independent": 0.08854166666666667,
     "resamples": 20000,

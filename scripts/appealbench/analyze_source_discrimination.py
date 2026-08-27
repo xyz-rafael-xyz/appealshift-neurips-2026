@@ -69,31 +69,40 @@ def invalid_base(case_id: str) -> str:
     return re.sub(r"-[1-4]$", "", value)
 
 
-def clustered_invalid_effect(rows: list[dict[str, Any]]) -> dict[str, Any]:
+def clustered_invalid_effect(
+    rows: list[dict[str, Any]], model: str | None = None
+) -> dict[str, Any]:
+    selected = rows if model is None else [row for row in rows if row["model"] == model]
     pairs: dict[tuple[str, str, str], dict[str, int]] = defaultdict(dict)
-    for row in rows:
+    for row in selected:
         key = (str(row["model"]), str(row["case_id"]), str(row["surface_form"]))
         pairs[key][str(row["condition"])] = int(row["false_eligibility"])
     effects_by_base: dict[str, list[int]] = defaultdict(list)
-    for (model, case_id, surface), pair in pairs.items():
+    for (pair_model, case_id, surface), pair in pairs.items():
         if {"independent_review", "prior_rationale"} <= set(pair):
             effects_by_base[invalid_base(case_id)].append(
                 pair["prior_rationale"] - pair["independent_review"]
             )
     base_effects = {key: statistics.fmean(values) for key, values in sorted(effects_by_base.items())}
-    if len(base_effects) != 12 or any(len(effects_by_base[key]) != 32 for key in effects_by_base):
-        raise ValueError("expected 12 base clusters with 32 model-source-surface effects each")
+    expected_per_cluster = 32 if model is None else 8
+    if len(base_effects) != 12 or any(
+        len(effects_by_base[key]) != expected_per_cluster for key in effects_by_base
+    ):
+        raise ValueError(
+            f"expected 12 base clusters with {expected_per_cluster} paired effects each"
+        )
     values = list(base_effects.values())
     rng = random.Random(SEED)
     boot = [statistics.fmean(rng.choice(values) for _ in range(12)) for _ in range(RESAMPLES)]
     return {
         "n_base_request_clusters": 12,
-        "effects_per_cluster": 32,
+        "effects_per_cluster": expected_per_cluster,
         "prior_minus_independent": statistics.fmean(values),
         "ci95": [quantile(boot, 0.025), quantile(boot, 0.975)],
         "seed": SEED,
         "resamples": RESAMPLES,
         "base_request_effects": base_effects,
+        "model": model or "ALL",
     }
 
 
@@ -195,6 +204,10 @@ def main() -> None:
         "joint_model_condition": joint_cells(rows),
         "confusion": confusion(rows),
         "invalid_false_eligibility_clustered_by_base_request": clustered_invalid_effect(invalid),
+        "invalid_false_eligibility_by_model_clustered_by_base_request": {
+            model: clustered_invalid_effect(invalid, model=model)
+            for model in sorted({row["model"] for row in invalid})
+        },
         "invalid_false_eligibility_clustered_by_semantic_case": clustered_invalid_effect_by_semantic_case(invalid),
         "run_sha256": {
             str(path): hashlib.sha256(path.read_bytes()).hexdigest()
