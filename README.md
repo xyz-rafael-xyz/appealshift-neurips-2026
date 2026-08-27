@@ -1,6 +1,6 @@
 # AppealShift
 
-This repository contains the synthetic cases, raw generations, scoring code, and analysis for the paper `Matched Sources Expose Distinct Admissibility Failures in Small-Model Appeal Review`.
+This repository contains the synthetic cases, raw generations, scoring code, and analysis for the paper `Matched Source Controls Expose a Capability Boundary in Appeal Review`.
 
 The primary experiment pairs accepted records with administratively plausible records from unlisted sources. It tests whether four small model artifacts can discriminate the source classes under an explicit whitelist. It also measures how an earlier denial rationale changes the error pattern.
 

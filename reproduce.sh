@@ -104,3 +104,11 @@ cmp experiments/appealbench/source_discrimination_analysis.json experiments/appe
   --valid-dir experiments/appealbench/matched_valid_controls \
   --output experiments/appealbench/reproduced_dual_convention_analysis.json
 cmp experiments/appealbench/dual_convention_analysis.json experiments/appealbench/reproduced_dual_convention_analysis.json
+"$PYTHON_BIN" scripts/appealbench/analyze_frontier.py \
+  --invalid experiments/appealbench/frontier/gpt-5-6-sol-invalid.jsonl \
+  --valid experiments/appealbench/frontier/gpt-5-6-sol-valid.jsonl \
+  --output experiments/appealbench/reproduced_frontier_analysis.json
+cmp experiments/appealbench/frontier_analysis.json experiments/appealbench/reproduced_frontier_analysis.json
+"$PYTHON_BIN" scripts/appealbench/validate_frontier.py \
+  --analysis experiments/appealbench/reproduced_frontier_analysis.json \
+  --output validation/appealbench/reproduced_frontier_validation.json

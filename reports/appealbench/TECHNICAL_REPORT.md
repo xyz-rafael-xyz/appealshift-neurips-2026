@@ -1,12 +1,12 @@
-# Matched Sources Expose Distinct Admissibility Failures in Small-Model Appeal Review
+# Matched Source Controls Expose a Capability Boundary in Appeal Review
 
 ## Abstract
 
-Plausible evidence can still be inadmissible under a service policy. We tested 48 synthetic humanitarian appeal cases from unlisted sources against 24 accepted-source controls. Qwen and Gemma accepted every record in both classes. Phi rejected every unlisted record and accepted half of the valid controls. Mistral reached 85.4 percent balanced source discrimination, yet routed 90 of 96 unlisted records to information requests instead of the required ineligible disposition. Exact independent invalid-source accuracy was 0 of 384. Earlier-rationale exposure raised Mistral's false eligibility by 35.42 points, with a 12-base-request interval from 29.17 to 41.67. Every other model was unchanged. AppealShift is a synthetic audit fixture and makes no claim about institutional remedy.
+Plausible evidence can still be inadmissible under a service policy, and apparent accuracy depends on the disposition convention. We pair 48 synthetic humanitarian appeals from unlisted sources with 24 controls from accepted sources. Four local models return the printed invalid-source disposition in 0 of 384 independent reviews. An alternative `NEED_INFORMATION` target changes their ranking. GPT-5.6 Sol separates all 96 unlisted records from all 48 accepted controls under both review contexts. It returns the printed disposition with 100 percent balanced exact accuracy, while the alternative convention scores the same outputs at 50 percent. Earlier-rationale exposure raises local Mistral's false eligibility by 35.42 points. AppealShift is a synthetic audit fixture and makes no claim about institutional remedy.
 
 ## Primary evidence update
 
-The matched grid contains 768 invalid-source decisions and 384 accepted-source decisions. The model-by-disposition matrix separates constant acceptance from wrong procedural routing and overcautious review. Pooled false eligibility rises descriptively by 8.85 points after rationale exposure. Mistral supplies the entire increase, rising 35.42 points with a 12-base-request interval from 29.17 to 41.67. Under the rationale condition, false eligibility is 51.0 percent when the policy appears first and 69.8 percent when the record appears first. The complete datasets and all eight source-class run files passed their grid and score audits. The sections below retain the earlier four-state experiment as secondary evidence on error redistribution.
+The local matched grid contains 768 invalid-source decisions and 384 accepted-source decisions. The model-by-disposition matrix separates constant acceptance from wrong procedural routing and overcautious review. Pooled false eligibility rises descriptively by 8.85 points after rationale exposure. Mistral supplies the entire increase, rising 35.42 points with a 12-base-request interval from 29.17 to 41.67. The frontier control adds 192 invalid-source and 96 accepted-source reviews. All 288 pass strict parsing and full-grounding checks. The sections below retain the earlier four-state experiment as secondary evidence on error redistribution.
 
 ## 1 Introduction
 
@@ -104,7 +104,13 @@ Phi supplies all 24 correct dispositions when the earlier rationale is visible, 
 
 Earlier-rationale exposure raises pooled false eligibility from 51.56 to 60.42 percent. The paired estimate is 8.854 points, reported as 8.85, while the two displayed rates differ by 8.86 after independent rounding. Mistral supplies the full movement, rising from 6.25 to 41.67 percent. Its 35.42-point change has a 12-base-request interval from 29.17 to 41.67. Every other model's false-eligibility rate is unchanged.
 
-### 5.2 The earlier valid-appeal result was model-specific
+### 5.2 The frontier route exposes a capability boundary
+
+GPT-5.6 Sol returns `INELIGIBLE` for every unlisted record and `ELIGIBLE` for every matched accepted-source control. Balanced source discrimination is 100 percent under both independent and prior-rationale review. Exact balanced accuracy is also 100 percent under the printed convention. The alternative `NEED_INFORMATION` convention scores the same fixed outputs at 50 percent because it changes only the invalid target. Every answer is strictly parsed and fully grounded.
+
+This scale contrast changes the interpretation of the local failures. Source admissibility is achievable on the supplied task. The four local artifacts fail in different ways, while the frontier route applies the printed whitelist and disposition rule consistently. One endpoint cannot support a general frontier-model claim.
+
+### 5.3 The earlier valid-appeal result was model-specific
 
 Three models had no paired change on valid appeals. Qwen and Gemma were already perfect under independent review. Phi remained at 62.50 percent. Mistral alone rose from 72.92 to 100 percent, a paired difference of +27.08 points with an interval from +16.67 to +39.58.
 
@@ -116,7 +122,7 @@ The leave-one-model-out analysis makes the dependence visible. The pooled gain i
 
 ![Exact disposition accuracy across evidence states](../../experiments/appealbench/full_analysis/disposition_accuracy.png)
 
-### 5.3 Accuracy hid changes in error type
+### 5.4 Accuracy hid changes in error type
 
 The rationale changed outcomes outside the confirmatory state. These comparisons are exploratory. Invalid-case accuracy rose from 9.38 to 24.48 percent. False eligibility on those same cases also rose, from 49.48 to 61.46 percent. Phi made most of the new correct invalid decisions. Mistral supplied the adverse false-eligibility shift, moving from 0 to 50 percent.
 
@@ -124,19 +130,19 @@ Incomplete-case accuracy fell from 50.00 to 35.94 percent. Appropriate informati
 
 Independent-review accuracy was only 9.38 percent on invalid records, and appropriate conflict routing was 11.46 percent. These floor effects make the deltas unsuitable as capability evidence at this model scale. We retain them as diagnostics because they show which wrong action appeared.
 
-### 5.4 The exploratory workflows did not repair the pattern
+### 5.5 The exploratory workflows did not repair the pattern
 
 The evidence checklist changed overall accuracy by -0.91 points relative to prior-rationale review. Its interval ran from -2.73 to +0.91. Valid accuracy was unchanged at 90.62 percent. The checklist reduced false eligibility on invalid evidence by 2.08 points, though its interval included zero.
 
 Within the commit-first condition, final review changed 194 of 768 preliminary commitments. Fifty-six changes corrected an error and 50 damaged a correct answer. The remaining 88 moved between incorrect labels, giving a net gain of six correct decisions over the preliminary commitments. Overall accuracy fell by 7.55 points against the separate prior-rationale final-review condition, from 316 to 258 correct decisions. That matched comparison contains 26 corrections, 84 new errors and 59 changes between incorrect labels. False eligibility on invalid evidence rose by 10.42 points, with an interval from +6.77 to +13.54.
 
-### 5.5 Surface order remained consequential
+### 5.6 Surface order remained consequential
 
 The two meaning-preserving orders produced different dispositions in 377 of 1,536 matched model-case-condition pairs. Qwen disagreed on 2.86 percent of its pairs and Gemma on 8.07 percent. Mistral disagreed on 36.46 percent. Phi disagreed on 50.78 percent.
 
 The direction depended on workflow. Record-first prompts performed better under independent and commit-first review. Policy-first prompts performed better with the checklist. Prior-rationale accuracy differed by only 1.04 points across surface orders. These differences are descriptive and show why one prompt order is too narrow for this audit.
 
-### 5.6 Post-freeze checks retained the limits
+### 5.7 Post-freeze checks retained the limits
 
 A same-case BF16 check reran all 48 valid-case surface variants under independent and prior-rationale review for Qwen and Gemma. It added 192 new reviews. Both artifacts retained 100 percent disposition accuracy and full grounding in each condition. Schema validity was also 100 percent. Their four-bit cells were also perfect. The result offers no estimate of a precision effect and leaves the confirmatory contrast without headroom.
 

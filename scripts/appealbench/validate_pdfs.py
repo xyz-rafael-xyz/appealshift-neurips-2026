@@ -12,7 +12,7 @@ from pathlib import Path
 from pypdf import PdfReader
 
 
-EXPECTED_TITLE = "Matched Sources Expose Distinct Admissibility Failures in Small-Model Appeal Review"
+EXPECTED_TITLE = "Matched Source Controls Expose a Capability Boundary in Appeal Review"
 EXPECTED_REPOSITORY_URL = "https://github.com/xyz-rafael-xyz/appealshift-neurips-2026"
 
 
@@ -112,10 +112,10 @@ def main() -> None:
     if not all(
         value in paper_source
         for value in (
-            "194 of 768 preliminary commitments",
-            "net gain of six correct decisions",
-            "from 316 to 258 decisions",
-            "26 corrections and 84 new errors",
+            "194 of 768 preliminary answers",
+            "56 corrections and 50 harmful changes",
+            "loses 58 correct decisions",
+            "raises false eligibility on invalid evidence by 10.42 points",
             "locally validated form payload supplied with the artifact",
             "Submission through the live form remains an author action",
         )

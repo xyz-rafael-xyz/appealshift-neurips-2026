@@ -39,6 +39,12 @@ Sensitivity is acceptance of the 48 matched valid records. Specificity is any no
 
 The invalid dataset SHA-256 is `ee78160188f0dfc64ab77d38efa62fb704c2e0a3621ecd6e3692c863b5097a6b`. The matched valid-control SHA-256 is `103cd2bd2a2d1430d27b0f4a48753491a65d1850772d19f05940cdb94dc5eb2c`. All eight source-class model files passed complete-grid, revision, prompt and score validation.
 
+### Frontier source discrimination
+
+GPT-5.6 Sol reviewed all 96 invalid records and 48 matched valid controls in both review contexts. It returned `INELIGIBLE` for every invalid record and `ELIGIBLE` for every valid control. Balanced source discrimination is therefore 100 percent in each context. Balanced exact accuracy is also 100 percent under the printed `INELIGIBLE` convention. The same outputs score 50 percent under the alternative `NEED_INFORMATION` convention because every invalid disposition differs from that target. Every review passes strict parsing and full-grounding checks.
+
+The frontier raw runs contain 192 invalid and 96 valid reviews. Their SHA-256 digests are `b32f5c8ae0336b2ca31abe6635a157040fac21435f34636d27af0c7d8eb69d83` and `3655a86c364ac1dec77364964d47a2af97a135b9b525ee06300a31abbc898aa7`. The deterministic analysis digest is `72d6b1453f33cf854cbdec9dadd601578bd8a7ec4213bb2da0fd4838be2c2b47`.
+
 ## Integrity
 
 The frozen evaluation contains 3,072 final reviews from four pinned models. Each model produced 768 reviews. Every model-condition-evidence-state cell contains 48 records. The complete validator found no provenance or score error. The primary scorer agreed with the independently written audit scorer on every record.

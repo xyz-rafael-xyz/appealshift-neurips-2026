@@ -17,7 +17,7 @@
 \usepackage{array}
 \hypersetup{colorlinks=true,citecolor=blue,urlcolor=blue}
 
-\title{Matched Sources Expose Distinct Admissibility Failures in Small-Model Appeal Review}
+\title{Matched Source Controls Expose a Capability Boundary in Appeal Review}
 \author{Rafael Gardos\\\texttt{gardos.rafael@gmail.com}}
 
 \begin{document}
@@ -26,7 +26,7 @@
 \maketitle
 
 \begin{abstract}
-Plausible evidence can still be inadmissible under a service policy. We pair 48 synthetic humanitarian appeals from unlisted sources with 24 controls from accepted sources. Qwen and Gemma accept every record in both classes, giving 50.0\% balanced source discrimination. Phi rejects every unlisted record and accepts half of the controls, reaching 75.0\%. Mistral reaches 85.4\% by accepting 77.1\% of valid records and rejecting 93.8\% of unlisted records. Under the printed policy, exact invalid-source accuracy is 0 of 384. An alternative target of \texttt{NEED\_INFORMATION} raises Mistral's independent balanced exact score from 38.5\% to 85.4\% and Phi's from 25.0\% to 62.5\%. Qwen and Gemma remain constant acceptors under both conventions. Earlier-rationale exposure raises Mistral's false eligibility by 35.42 points, with a 12-base-request interval of [29.17, 41.67]. Four pinned four-bit models produce 1,152 matched reviews over two prompt orders. The cases support no operational aid decision. We conclude with a three-step Matched Admissibility Audit for model-supported review.
+Plausible evidence can still be inadmissible under a service policy, and apparent accuracy depends on the disposition convention used to score it. We pair 48 synthetic humanitarian appeals from unlisted sources with 24 controls from accepted sources. Under the printed policy, four local models return the exact invalid-source disposition in 0 of 384 independent reviews. An alternative \texttt{NEED\_INFORMATION} target changes the model ranking. Mistral's independent balanced exact score rises from 38.5\% to 85.4\%, and Phi's rises from 25.0\% to 62.5\%. Qwen and Gemma remain constant acceptors. GPT-5.6 Sol separates all 96 unlisted records from all 48 accepted controls under both review contexts. It returns the printed disposition with 100\% balanced exact accuracy, while the alternative convention scores the same outputs at 50\%. Every frontier answer is strictly parsed and fully grounded. Earlier-rationale exposure raises local Mistral's false eligibility by 35.42 points, with a 12-base-request interval of [29.17, 41.67]. The cases support no operational aid decision. We conclude with a three-step Matched Admissibility Audit for model-supported review.
 \end{abstract}
 
 \section{Introduction}
@@ -113,6 +113,8 @@ Each model produces 768 final reviews on the earlier four-state grid. That evalu
 
 Two earlier checks remain exploratory. The first reruns all 48 valid-case surface variants under independent and prior-rationale review with matching BF16 Qwen and Gemma artifacts. This adds 192 reviews. The second is the 12-case plausible-source slice that motivated the prospective expansion. It adds 192 reviews across the original four-bit models and is kept separate from the new primary set.
 
+After the local source comparison was sealed, GPT-5.6 Sol reviewed all 96 unlisted records and 48 matched controls under independent and prior-rationale context. The 288 calls use seed 20260827 with reasoning disabled and provider-managed temperature. The runner records the requested and returned model slugs, provider, token use and generation identifier. This post-audit replication tests whether the local source failures remain at a stronger endpoint. It does not estimate frontier-model behavior in general.
+
 \section{Analysis}
 
 Balanced source discrimination and exact invalid-source disposition are co-primary descriptive endpoints for the plausible-source experiment. Balanced discrimination averages valid-source sensitivity and unlisted-source specificity. Specificity treats any non-\texttt{ELIGIBLE} answer as rejection, while exact accuracy still requires the policy's stated disposition. False eligibility and fully grounded correctness are co-reported diagnostics. Fully grounded correctness also requires the cited clause and decisive evidence identifiers to agree with the deterministic target.
@@ -125,7 +127,7 @@ The earlier valid-appeal contrast pools four fixed models and both surface forms
 
 Every model-specific result is exploratory. The two additional workflows are exploratory as well. Results on the other evidence states receive the same treatment. Their intervals are unadjusted, with no multiplicity correction.
 
-Validation reconstructs every prompt and score, then checks model revisions and dataset hashes. The primary and independent scorers agree on every final record. Eight of 3,072 final outputs in the earlier grid were unparseable. All 1,152 source-comparison reviews parsed.
+Validation reconstructs every prompt and score, then checks model revisions and dataset hashes. The primary and independent scorers agree on every local final record. Eight of 3,072 final outputs in the earlier grid were unparseable. All 1,152 local source-comparison reviews and all 288 frontier reviews parsed.
 
 \section{Results}
 
@@ -196,6 +198,12 @@ Gemma 3 4B$^\dagger$ & 50.0 & 50.0 & 50.0 & 50.0 \\
 
 The source-type breakdown rules out one troublesome document label as the sole cause. Exact accuracy remains zero for each of the four unlisted types. Independent false eligibility ranges from 50.00\% to 56.25\% across those types.
 
+\subsection{A stronger reviewer resolves the printed source rule}
+
+GPT-5.6 Sol accepts all 48 matched valid controls and rejects all 96 unlisted records under both review contexts. Balanced source discrimination is therefore 100\%. Every invalid review returns \texttt{INELIGIBLE} with C2 and E1, while every valid review returns \texttt{ELIGIBLE} with C1 and E1. Strict schema and full-grounding rates are also 100\%. Showing the earlier rationale changes none of the 288 dispositions.
+
+The dual-convention result remains necessary. Under the printed C2 target, frontier balanced exact accuracy is 100\%. Rescoring the same invalid outputs against \texttt{NEED\_INFORMATION} lowers it to 50\%, because every valid control remains correct and every invalid disposition becomes wrong. The matched task is therefore solvable at this endpoint, while the local failures mark a capability boundary on these prompts. A policy owner must still choose and publish the disposition convention before an audit score has procedural meaning.
+
 \subsection{A denial rationale raises false eligibility}
 
 With the earlier rationale visible, pooled disposition accuracy rises to 6.25\%. Phi supplies the entire change. Its 24 correct dispositions still cite the wrong clause or evidence, leaving fully grounded accuracy at zero. A fixed five-case record audit found substantive mismatches rather than formatting variants. Every case cites C1, C3 or C4 instead of C2. One also omits E1. The other three models remain at zero disposition accuracy.
@@ -204,32 +212,9 @@ Pooled false eligibility rises from 51.56\% to 60.42\%, a descriptive average ch
 
 The larger invalid-source result reproduces zero independent exact accuracy and balances four source types. The matched controls prevent that zero from being read as one common failure. The original slice remains in the artifact as the observation that motivated the larger test.
 
-\subsection{The earlier valid-appeal contrast remains secondary}
+\subsection{Secondary evidence-state checks}
 
-Three models had no paired change on the earlier valid appeals. Qwen and Gemma were already at 100 percent under independent review. Phi stayed at 62.50 percent. Mistral alone moved, rising from 72.92 to 100 percent. Table~\ref{tabvalid} reports this secondary contrast without promoting it above the matched source result.
-
-\begin{table}[t]
-\caption{Valid-appeal accuracy. Model rows give paired percentage-point intervals. The pooled row has no interval because Mistral supplies every change. Omission gives the pooled gain after dropping that row's model.}
-\label{tabvalid}
-\centering
-\small
-\begin{tabular}{lrrrrr}
-\toprule
-Model & Independent & Rationale & Difference & 95\% interval & Omission \\
-\midrule
-Qwen3 4B & 100.00 & 100.00 & 0.00 & 0.00, 0.00 & 9.03 \\
-Phi-4-mini & 62.50 & 62.50 & 0.00 & 0.00, 0.00 & 9.03 \\
-Gemma 3 4B & 100.00 & 100.00 & 0.00 & 0.00, 0.00 & 9.03 \\
-Mistral 7B & 72.92 & 100.00 & 27.08 & 16.67, 39.58 & 0.00 \\
-\midrule
-Pooled & 83.85 & 90.62 & 6.77 & -- & -- \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-The earlier pooled hypothesis predicted lower valid-appeal accuracy after rationale exposure. Instead, the fixed-artifact summary rose from 83.85 to 90.62 percent. Its paired gain is 6.77 points. All 13 improved pairs belong to Mistral, whose 27.08-point change has an interval from 16.67 to 39.58. Omitting Mistral reduces the pooled gain to zero. Each other omission produces a 9.03-point gain. Qwen and Gemma were at ceiling under both conditions, so this contrast had no discriminative power for either model. The result does not establish a general benefit from revealing an earlier rationale.
-
-The BF16 check reproduced the two ceiling cells exactly. Qwen and Gemma returned every disposition correctly at both precisions. Their outputs were fully grounded and schema-valid under both conditions. Quantization therefore does not explain their lack of movement on this subset. Neither artifact had room to reveal a condition effect.
+On the earlier valid appeals, pooled local accuracy rises from 83.85\% to 90.62\% after rationale exposure. Mistral supplies all 13 improvements and rises 27.08 points [16.67, 39.58]. Omitting it reduces the pooled gain to zero. A BF16 check reproduces the Qwen and Gemma ceiling cells exactly, so those two cells cannot reveal a condition effect at either precision.
 
 \subsection{Accuracy hid changes in error type}
 
@@ -256,13 +241,7 @@ Incomplete-case accuracy fell from 50.00 to 35.94 percent. Appropriate informati
 
 Independent-review accuracy was only 9.38 percent on invalid records, and appropriate conflict routing was 11.46 percent. These floor effects make the deltas unsuitable as evidence of task capability at this model scale. They still show which wrong action appeared. The same exposure can improve the target label in one state and increase a consequential error in another.
 
-\subsection{The earlier slice pointed in the same direction}
-
-The exploratory 12-case slice had zero independent-review accuracy across 96 reviews. Rationale exposure raised accuracy to 10.42\%, driven by Phi, while fully grounded accuracy remained zero. False eligibility rose from 50.00\% to 57.29\%. That result motivated the larger experiment above. It is not pooled with the new data.
-
-\subsection{The exploratory workflows did not supply a prompt fix}
-
-The evidence checklist changed overall accuracy by $-0.91$ points relative to prior-rationale review, with an interval from $-2.73$ to 0.91. Within the commit-first condition, final review changed 194 of 768 preliminary commitments. Fifty-six changes corrected an error and 50 damaged a correct answer, a net gain of six correct decisions over the preliminary answers. Correctness against prior-rationale final review fell from 316 to 258 decisions, or 7.55 points. That comparison has 26 corrections and 84 new errors. False eligibility on invalid evidence rose by 10.42 points in the same comparison. Across the wider grid, the two surface forms produced different dispositions in 24.54\% of matched comparisons. The artifact reports each model and workflow separately.
+The exploratory 12-case slice had zero independent accuracy across 96 reviews and motivated the larger experiment. It is not pooled. The evidence checklist changes overall accuracy by $-0.91$ points $[-2.73,0.91]$. Commit-first review changes 194 of 768 preliminary answers, with 56 corrections and 50 harmful changes relative to those preliminary answers. Against prior-rationale final review, it loses 58 correct decisions and raises false eligibility on invalid evidence by 10.42 points. Neither workflow supplies a reliable prompt fix. Full state, workflow and surface breakdowns remain in the artifact.
 
 \section{Accountability requirement for humanitarian review}
 
@@ -287,7 +266,7 @@ For peace and humanitarian work, this yields a concrete procedural requirement. 
 
 \section{Limits and ethical use}
 
-The benchmark is in English and uses short templates. Repeated wording may cue models. The two surface orders test one wording change. Translation and longer histories remain outside scope. Four selected source types cannot represent open-ended document variation. Four local four-bit models do not represent frontier review systems.
+The benchmark is in English and uses short templates. Repeated wording may cue models. The two surface orders test one wording change. Translation and longer histories remain outside scope. Four selected source types cannot represent open-ended document variation. The frontier result covers one routed model endpoint and does not represent larger review systems as a class.
 
 The fictional workflows avoid direct allocation decisions, which narrows ecological validity. Real services have local rules. Affected people may lack accepted evidence or face danger when using a complaint channel. Those conditions do not appear here. The study covers four local models with greedy four-bit decoding. It does not represent proprietary systems or larger reasoning models.
 
@@ -295,7 +274,7 @@ Exact labels reproduce scores, not policy legitimacy. AppealShift is an audit fi
 
 No human participant or private record was used. Every case comes from a fictional template. The score-blind packet has no external labels, so no completed human annotation study is claimed.
 
-\paragraph{Reproducibility.} Code, data, protocol records, raw outputs and audits are public at \url{https://github.com/xyz-rafael-xyz/appealshift-neurips-2026}. The public history does not establish when any protocol or analysis plan was written relative to generation. A separate program reproduces the earlier-grid claims. The one-page abstract renders the locally validated form payload supplied with the artifact. Submission through the live form remains an author action. This supporting paper uses a longer technical abstract.
+\paragraph{Reproducibility.} Code, data, protocol records, raw outputs and audits are public at \url{https://github.com/xyz-rafael-xyz/appealshift-neurips-2026}. The public history does not establish when any protocol or analysis plan was written relative to generation. A separate program reproduces the earlier-grid claims, and a deterministic analysis verifies the 288 frontier reviews. The one-page abstract renders the locally validated form payload supplied with the artifact. Submission through the live form remains an author action. This supporting paper uses a longer technical abstract.
 
 \clearpage
 \bibliographystyle{plainnat}

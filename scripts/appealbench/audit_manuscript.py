@@ -77,7 +77,7 @@ def main() -> None:
     required = {
         "single_blind_workshop": r"\usepackage[sglblindworkshop]{template/neurips_2026}",
         "workshop_title": r"\workshoptitle{AI for Peace Workshop}",
-        "paper_title": r"\title{Matched Sources Expose Distinct Admissibility Failures in Small-Model Appeal Review}",
+        "paper_title": r"\title{Matched Source Controls Expose a Capability Boundary in Appeal Review}",
         "identified_author": r"\author{Rafael Gardos\\\texttt{gardos.rafael@gmail.com}}",
         "line_numbers_disabled": r"\nolinenumbers",
     }

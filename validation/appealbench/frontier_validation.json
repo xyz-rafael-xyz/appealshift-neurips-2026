@@ -1,0 +1,18 @@
+{
+  "analysis_sha256": "72d6b1453f33cf854cbdec9dadd601578bd8a7ec4213bb2da0fd4838be2c2b47",
+  "checks": {
+    "analysis_exact": true,
+    "condition_state_grid": true,
+    "invalid_dispositions": true,
+    "model_exact": true,
+    "provider_openai": true,
+    "record_counts": true,
+    "strict_and_grounded": true,
+    "unique_cells": true,
+    "valid_dispositions": true
+  },
+  "invalid_sha256": "b32f5c8ae0336b2ca31abe6635a157040fac21435f34636d27af0c7d8eb69d83",
+  "recorded_cost_usd": 0.442008,
+  "status": "pass",
+  "valid_sha256": "3655a86c364ac1dec77364964d47a2af97a135b9b525ee06300a31abbc898aa7"
+}

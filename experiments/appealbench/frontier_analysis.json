@@ -1,0 +1,74 @@
+{
+  "analysis_kind": "post-audit matched frontier source discrimination",
+  "conditions": {
+    "independent_review": {
+      "balanced_source_discrimination": 1.0,
+      "convention_scores": {
+        "need_information": {
+          "balanced_exact_accuracy": 0.5,
+          "invalid_exact_accuracy": 0.0,
+          "invalid_target": "NEED_INFORMATION",
+          "valid_exact_accuracy": 1.0
+        },
+        "printed": {
+          "balanced_exact_accuracy": 1.0,
+          "invalid_exact_accuracy": 1.0,
+          "invalid_target": "INELIGIBLE",
+          "valid_exact_accuracy": 1.0
+        }
+      },
+      "fully_grounded_rate": 1.0,
+      "invalid_n": 96,
+      "invalid_prediction_counts": {
+        "INELIGIBLE": 96
+      },
+      "invalid_source_specificity": 1.0,
+      "strict_schema_rate": 1.0,
+      "valid_n": 48,
+      "valid_prediction_counts": {
+        "ELIGIBLE": 48
+      },
+      "valid_source_sensitivity": 1.0
+    },
+    "prior_rationale": {
+      "balanced_source_discrimination": 1.0,
+      "convention_scores": {
+        "need_information": {
+          "balanced_exact_accuracy": 0.5,
+          "invalid_exact_accuracy": 0.0,
+          "invalid_target": "NEED_INFORMATION",
+          "valid_exact_accuracy": 1.0
+        },
+        "printed": {
+          "balanced_exact_accuracy": 1.0,
+          "invalid_exact_accuracy": 1.0,
+          "invalid_target": "INELIGIBLE",
+          "valid_exact_accuracy": 1.0
+        }
+      },
+      "fully_grounded_rate": 1.0,
+      "invalid_n": 96,
+      "invalid_prediction_counts": {
+        "INELIGIBLE": 96
+      },
+      "invalid_source_specificity": 1.0,
+      "strict_schema_rate": 1.0,
+      "valid_n": 48,
+      "valid_prediction_counts": {
+        "ELIGIBLE": 48
+      },
+      "valid_source_sensitivity": 1.0
+    }
+  },
+  "conventions": {
+    "need_information": "NEED_INFORMATION",
+    "printed": "INELIGIBLE"
+  },
+  "model": [
+    "openai/gpt-5.6-sol"
+  ],
+  "run_sha256": {
+    "experiments/appealbench/frontier/gpt-5-6-sol-invalid.jsonl": "b32f5c8ae0336b2ca31abe6635a157040fac21435f34636d27af0c7d8eb69d83",
+    "experiments/appealbench/frontier/gpt-5-6-sol-valid.jsonl": "3655a86c364ac1dec77364964d47a2af97a135b9b525ee06300a31abbc898aa7"
+  }
+}

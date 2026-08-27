@@ -12,7 +12,7 @@
 \usepackage{microtype}
 \hypersetup{hidelinks}
 
-\title{Matched Sources Expose Distinct Admissibility Failures in Small-Model Appeal Review}
+\title{Matched Source Controls Expose a Capability Boundary in Appeal Review}
 \author{Rafael Gardos\\\texttt{gardos.rafael@gmail.com}}
 
 \begin{document}
@@ -21,7 +21,7 @@
 \maketitle
 
 \begin{abstract}
-Plausible evidence can still be inadmissible under a service policy. We pair 48 synthetic humanitarian appeals from unlisted sources with 24 controls from accepted sources. Qwen and Gemma accept every record in both classes, giving 50.0 percent balanced source discrimination. Phi rejects every unlisted record and accepts half of the controls, reaching 75.0 percent. Mistral reaches 85.4 percent by accepting 77.1 percent of valid records and rejecting 93.8 percent of unlisted records. Under the printed policy, exact invalid-source accuracy is 0 of 384. An alternative information-request target raises Mistral's independent balanced exact score from 38.5 to 85.4 percent and Phi's from 25.0 to 62.5 percent. Qwen and Gemma remain constant acceptors under both conventions. Earlier-rationale exposure raises Mistral's false eligibility by 35.42 points, with a 12-base-request interval of [29.17, 41.67]. Four pinned four-bit models produce 1,152 matched reviews over two prompt orders. The fictional cases support no operational aid decision. For peace-oriented review, we define the three-step Matched Admissibility Audit. It pairs accepted and unlisted sources. It checks exact dispositions under both scoring conventions, then repeats the comparison after prompt-order changes.
+Plausible evidence can still be inadmissible under a service policy, and apparent accuracy depends on the disposition convention used to score it. We pair 48 synthetic humanitarian appeals from unlisted sources with 24 controls from accepted sources. Under the printed policy, four local models return the exact invalid-source disposition in 0 of 384 independent reviews. An alternative information-request target changes the model ranking. Mistral's independent balanced exact score rises from 38.5 to 85.4 percent, and Phi's rises from 25.0 to 62.5 percent. Qwen and Gemma remain constant acceptors. GPT-5.6 Sol separates all 96 unlisted records from all 48 accepted controls under both review contexts. It returns the printed disposition with 100 percent balanced exact accuracy, while the alternative convention scores the same outputs at 50 percent. Every frontier answer is strictly parsed and fully grounded. Earlier-rationale exposure raises local Mistral's false eligibility by 35.42 points, with a 12-base-request interval of [29.17, 41.67]. The fictional cases support no operational aid decision. For peace-oriented review, we define a three-step Matched Admissibility Audit. It pairs accepted with unlisted sources. The audit scores the exact disposition under a declared convention before repeating across prompt order and model revision.
 \end{abstract}
 
 \end{document}
