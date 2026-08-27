@@ -99,3 +99,8 @@ cmp experiments/appealbench/adversarial_v2_analysis.json experiments/appealbench
     experiments/appealbench/matched_valid_controls/mistral7b.jsonl \
   --output experiments/appealbench/reproduced_source_discrimination_analysis.json
 cmp experiments/appealbench/source_discrimination_analysis.json experiments/appealbench/reproduced_source_discrimination_analysis.json
+"$PYTHON_BIN" scripts/appealbench/analyze_dual_convention.py \
+  --invalid-dir experiments/appealbench/adversarial_v2 \
+  --valid-dir experiments/appealbench/matched_valid_controls \
+  --output experiments/appealbench/reproduced_dual_convention_analysis.json
+cmp experiments/appealbench/dual_convention_analysis.json experiments/appealbench/reproduced_dual_convention_analysis.json

@@ -1,0 +1,261 @@
+{
+  "analysis_kind": "deterministic post-audit dual-convention scoring",
+  "conventions": {
+    "need_information": "NEED_INFORMATION",
+    "printed": "INELIGIBLE"
+  },
+  "models": {
+    "gemma3": {
+      "independent_review": {
+        "invalid_prediction_counts": {
+          "ELIGIBLE": 96
+        },
+        "scores": {
+          "need_information": {
+            "balanced_exact_accuracy": 0.5,
+            "invalid_exact_accuracy": 0.0,
+            "invalid_n": 96,
+            "invalid_target": "NEED_INFORMATION",
+            "valid_exact_accuracy": 1.0,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          },
+          "printed": {
+            "balanced_exact_accuracy": 0.5,
+            "invalid_exact_accuracy": 0.0,
+            "invalid_n": 96,
+            "invalid_target": "INELIGIBLE",
+            "valid_exact_accuracy": 1.0,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          }
+        },
+        "valid_prediction_counts": {
+          "ELIGIBLE": 48
+        }
+      },
+      "prior_rationale": {
+        "invalid_prediction_counts": {
+          "ELIGIBLE": 96
+        },
+        "scores": {
+          "need_information": {
+            "balanced_exact_accuracy": 0.5,
+            "invalid_exact_accuracy": 0.0,
+            "invalid_n": 96,
+            "invalid_target": "NEED_INFORMATION",
+            "valid_exact_accuracy": 1.0,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          },
+          "printed": {
+            "balanced_exact_accuracy": 0.5,
+            "invalid_exact_accuracy": 0.0,
+            "invalid_n": 96,
+            "invalid_target": "INELIGIBLE",
+            "valid_exact_accuracy": 1.0,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          }
+        },
+        "valid_prediction_counts": {
+          "ELIGIBLE": 48
+        }
+      }
+    },
+    "mistral7b": {
+      "independent_review": {
+        "invalid_prediction_counts": {
+          "ELIGIBLE": 6,
+          "NEED_INFORMATION": 90
+        },
+        "scores": {
+          "need_information": {
+            "balanced_exact_accuracy": 0.8541666666666667,
+            "invalid_exact_accuracy": 0.9375,
+            "invalid_n": 96,
+            "invalid_target": "NEED_INFORMATION",
+            "valid_exact_accuracy": 0.7708333333333334,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          },
+          "printed": {
+            "balanced_exact_accuracy": 0.3854166666666667,
+            "invalid_exact_accuracy": 0.0,
+            "invalid_n": 96,
+            "invalid_target": "INELIGIBLE",
+            "valid_exact_accuracy": 0.7708333333333334,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          }
+        },
+        "valid_prediction_counts": {
+          "ELIGIBLE": 37,
+          "NEED_INFORMATION": 11
+        }
+      },
+      "prior_rationale": {
+        "invalid_prediction_counts": {
+          "ELIGIBLE": 40,
+          "NEED_INFORMATION": 56
+        },
+        "scores": {
+          "need_information": {
+            "balanced_exact_accuracy": 0.7916666666666667,
+            "invalid_exact_accuracy": 0.5833333333333334,
+            "invalid_n": 96,
+            "invalid_target": "NEED_INFORMATION",
+            "valid_exact_accuracy": 1.0,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          },
+          "printed": {
+            "balanced_exact_accuracy": 0.5,
+            "invalid_exact_accuracy": 0.0,
+            "invalid_n": 96,
+            "invalid_target": "INELIGIBLE",
+            "valid_exact_accuracy": 1.0,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          }
+        },
+        "valid_prediction_counts": {
+          "ELIGIBLE": 48
+        }
+      }
+    },
+    "phi4mini": {
+      "independent_review": {
+        "invalid_prediction_counts": {
+          "HUMAN_REVIEW": 24,
+          "NEED_INFORMATION": 72
+        },
+        "scores": {
+          "need_information": {
+            "balanced_exact_accuracy": 0.625,
+            "invalid_exact_accuracy": 0.75,
+            "invalid_n": 96,
+            "invalid_target": "NEED_INFORMATION",
+            "valid_exact_accuracy": 0.5,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          },
+          "printed": {
+            "balanced_exact_accuracy": 0.25,
+            "invalid_exact_accuracy": 0.0,
+            "invalid_n": 96,
+            "invalid_target": "INELIGIBLE",
+            "valid_exact_accuracy": 0.5,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          }
+        },
+        "valid_prediction_counts": {
+          "ELIGIBLE": 24,
+          "HUMAN_REVIEW": 17,
+          "NEED_INFORMATION": 7
+        }
+      },
+      "prior_rationale": {
+        "invalid_prediction_counts": {
+          "HUMAN_REVIEW": 36,
+          "INELIGIBLE": 24,
+          "NEED_INFORMATION": 36
+        },
+        "scores": {
+          "need_information": {
+            "balanced_exact_accuracy": 0.2916666666666667,
+            "invalid_exact_accuracy": 0.375,
+            "invalid_n": 96,
+            "invalid_target": "NEED_INFORMATION",
+            "valid_exact_accuracy": 0.20833333333333334,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          },
+          "printed": {
+            "balanced_exact_accuracy": 0.22916666666666669,
+            "invalid_exact_accuracy": 0.25,
+            "invalid_n": 96,
+            "invalid_target": "INELIGIBLE",
+            "valid_exact_accuracy": 0.20833333333333334,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          }
+        },
+        "valid_prediction_counts": {
+          "ELIGIBLE": 10,
+          "HUMAN_REVIEW": 29,
+          "NEED_INFORMATION": 9
+        }
+      }
+    },
+    "qwen3": {
+      "independent_review": {
+        "invalid_prediction_counts": {
+          "ELIGIBLE": 96
+        },
+        "scores": {
+          "need_information": {
+            "balanced_exact_accuracy": 0.5,
+            "invalid_exact_accuracy": 0.0,
+            "invalid_n": 96,
+            "invalid_target": "NEED_INFORMATION",
+            "valid_exact_accuracy": 1.0,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          },
+          "printed": {
+            "balanced_exact_accuracy": 0.5,
+            "invalid_exact_accuracy": 0.0,
+            "invalid_n": 96,
+            "invalid_target": "INELIGIBLE",
+            "valid_exact_accuracy": 1.0,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          }
+        },
+        "valid_prediction_counts": {
+          "ELIGIBLE": 48
+        }
+      },
+      "prior_rationale": {
+        "invalid_prediction_counts": {
+          "ELIGIBLE": 96
+        },
+        "scores": {
+          "need_information": {
+            "balanced_exact_accuracy": 0.5,
+            "invalid_exact_accuracy": 0.0,
+            "invalid_n": 96,
+            "invalid_target": "NEED_INFORMATION",
+            "valid_exact_accuracy": 1.0,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          },
+          "printed": {
+            "balanced_exact_accuracy": 0.5,
+            "invalid_exact_accuracy": 0.0,
+            "invalid_n": 96,
+            "invalid_target": "INELIGIBLE",
+            "valid_exact_accuracy": 1.0,
+            "valid_n": 48,
+            "valid_target": "ELIGIBLE"
+          }
+        },
+        "valid_prediction_counts": {
+          "ELIGIBLE": 48
+        }
+      }
+    }
+  },
+  "run_sha256": {
+    "experiments/appealbench/adversarial_v2/gemma3.jsonl": "efeac181d78f0f305b163c26793421726376b569a247da02f34d75aee3bfc4ce",
+    "experiments/appealbench/adversarial_v2/mistral7b.jsonl": "5aeb86d1ead82dd5936877061c83e861b142818da81bc7d5965dfdbc29632774",
+    "experiments/appealbench/adversarial_v2/phi4mini.jsonl": "58aad5be20f36c0f3dd18d69b148e8a6a2aa6f57c8cd6c05dc81373d9a6d8a03",
+    "experiments/appealbench/adversarial_v2/qwen3.jsonl": "ce1a92e3b9320572f8786fd5e4d963ec1b3409fa0ae80da6956ab22f63cdc77e",
+    "experiments/appealbench/matched_valid_controls/gemma3.jsonl": "e987503320f3c713b701d7eead97d3ed070ca15c5059dfe7c2239bf5ca0c8436",
+    "experiments/appealbench/matched_valid_controls/mistral7b.jsonl": "cfbff101d886afc76a49273a7fbc59d321fa14f55004c9e57dd4622dee020de4",
+    "experiments/appealbench/matched_valid_controls/phi4mini.jsonl": "ac2a0ab0436f3730fe46e688a087766eca0594e90832efb685b81cc4c2511d7b",
+    "experiments/appealbench/matched_valid_controls/qwen3.jsonl": "ffcce191167a5441cc3ac4da392d0b29fb8162d45d55700538791f2f7aa708d0"
+  }
+}

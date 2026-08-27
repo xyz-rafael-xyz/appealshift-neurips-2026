@@ -26,7 +26,7 @@
 \maketitle
 
 \begin{abstract}
-Plausible evidence can still be inadmissible under a service policy. We pair 48 synthetic humanitarian appeals from unlisted sources with 24 controls from accepted sources. Qwen and Gemma accept every record in both classes, giving 50.0\% balanced source discrimination. Phi rejects every unlisted record and accepts half of the controls, reaching 75.0\%. Mistral reaches 85.4\% by accepting 77.1\% of valid records and rejecting 93.8\% of unlisted records. It still routes 90 of 96 unlisted records to information requests instead of the required ineligible disposition. Exact invalid-source accuracy is 0 of 384. Earlier-rationale exposure raises Mistral's false eligibility by 35.42 points, with a 12-base-request interval of [29.17, 41.67]. Every other model is unchanged. Four pinned four-bit models produce 1,152 matched reviews over two prompt orders. The cases are fictional and support no operational aid decision. A peace-oriented deployment audit should pair both source classes and retain the exact disposition across prompt order and each model revision.
+Plausible evidence can still be inadmissible under a service policy. We pair 48 synthetic humanitarian appeals from unlisted sources with 24 controls from accepted sources. Qwen and Gemma accept every record in both classes, giving 50.0\% balanced source discrimination. Phi rejects every unlisted record and accepts half of the controls, reaching 75.0\%. Mistral reaches 85.4\% by accepting 77.1\% of valid records and rejecting 93.8\% of unlisted records. Under the printed policy, exact invalid-source accuracy is 0 of 384. An alternative target of \texttt{NEED\_INFORMATION} raises Mistral's independent balanced exact score from 38.5\% to 85.4\% and Phi's from 25.0\% to 62.5\%. Qwen and Gemma remain constant acceptors under both conventions. Earlier-rationale exposure raises Mistral's false eligibility by 35.42 points, with a 12-base-request interval of [29.17, 41.67]. Four pinned four-bit models produce 1,152 matched reviews over two prompt orders. The cases support no operational aid decision. We conclude with a three-step Matched Admissibility Audit for model-supported review.
 \end{abstract}
 
 \section{Introduction}
@@ -38,6 +38,8 @@ Humanitarian accountability gives this problem a direct connection to peace work
 We study one bounded behavior in that process. The primary experiment asks whether a model discriminates between accepted and unlisted sources. Exact disposition remains co-primary because it determines the procedure that follows. We also ask whether a case-specific denial rationale changes source discrimination. The rationale has no evidentiary status under the supplied rules.
 
 The primary set contains 48 semantic invalid-source cases across four of the eight fictional humanitarian service families. Four plausible source types replace an accepted source while the rest of the record remains current. The matched control uses the same 12 base requests and instantiates both source types that the policy accepts. Each case appears in two meaning-preserving orders. A source audit found no appeal item or saved model review reused elsewhere. Similar service families were treated as topic overlap. We test independent review and prior-rationale exposure with four pinned local instruction models. An earlier 96-case set supplies a secondary audit of valid, invalid, incomplete and conflicting evidence.
+
+The experimental unit is one appeal review under a named source rule. No field-verifier judgment, memory decision or readability rewrite from the other studies enters an AppealShift score.
 
 The central result is heterogeneous. Qwen and Gemma are constant acceptors across the matched source classes. Phi rejects every unlisted source and accepts only half of the valid controls. Mistral discriminates best, yet asks for information where C2 requires rejection. None of 384 independent reviews returns the exact invalid-source disposition. The earlier rationale makes Mistral less selective. The matched design shows why a zero or a rejection rate alone cannot identify source-rule capability.
 
@@ -132,7 +134,7 @@ Validation reconstructs every prompt and score, then checks model revisions and 
 Independent-review accuracy is zero across 384 invalid-source decisions. Fully grounded accuracy is also zero. Table~\ref{tabconfusion} shows what that pooled zero conceals. Qwen and Gemma choose \texttt{ELIGIBLE} every time. Mistral asks for information on 90 of 96 cases. Phi sends 72 to information requests and 24 to human review. The latter answers reject the unlisted record but do not apply C2's required \texttt{INELIGIBLE} disposition.
 
 \begin{table}[t]
-\caption{Independent invalid-source reviews by predicted disposition. Each row has 96 decisions. E, I, N and H denote \texttt{ELIGIBLE}, \texttt{INELIGIBLE}, \texttt{NEED\_INFORMATION} and \texttt{HUMAN\_REVIEW}.}
+\caption{Independent invalid-source reviews by predicted disposition. Each row has 96 decisions. E, I, N and H denote \texttt{ELIGIBLE}, \texttt{INELIGIBLE}, \texttt{NEED\_INFORMATION} and \texttt{HUMAN\_REVIEW}. $\dagger$ marks a constant acceptor.}
 \label{tabconfusion}
 \centering
 \small
@@ -140,10 +142,10 @@ Independent-review accuracy is zero across 384 invalid-source decisions. Fully g
 \toprule
 Model & E & I & N & H \\
 \midrule
-Qwen3 4B & 96 & 0 & 0 & 0 \\
+Qwen3 4B$^\dagger$ & 96 & 0 & 0 & 0 \\
 Mistral 7B & 6 & 0 & 90 & 0 \\
 Phi-4-mini & 0 & 0 & 72 & 24 \\
-Gemma 3 4B & 96 & 0 & 0 & 0 \\
+Gemma 3 4B$^\dagger$ & 96 & 0 & 0 & 0 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -151,7 +153,7 @@ Gemma 3 4B & 96 & 0 & 0 & 0 \\
 The matched controls identify whether those behaviors discriminate source class. Qwen and Gemma accept all 48 valid controls and all 96 unlisted records. Their balanced discrimination is 50\%, the constant-acceptance value. Phi rejects every unlisted source but accepts only 24 of 48 valid records. Mistral accepts 37 valid records and rejects 90 unlisted records. It reaches 85.4\% balanced discrimination while never returning the exact invalid disposition.
 
 \begin{table}[t]
-\caption{Matched source discrimination in percent. Sensitivity is acceptance of 48 valid controls. Specificity is non-acceptance of 96 unlisted records. Exact is correct invalid-source disposition accuracy. Balanced averages sensitivity and specificity.}
+\caption{Matched source discrimination in percent. Sensitivity is acceptance of 48 valid controls. Specificity is non-acceptance of 96 unlisted records. Exact is correct invalid-source disposition accuracy. Balanced averages sensitivity and specificity. $\dagger$ marks a constant acceptor.}
 \label{tabmatched}
 \centering
 \small
@@ -159,14 +161,35 @@ The matched controls identify whether those behaviors discriminate source class.
 \toprule
 Model & Review & Sens. & Spec. & Exact & Balanced \\
 \midrule
-Qwen3 4B & Independent & 100.0 & 0.0 & 0.0 & 50.0 \\
+Qwen3 4B$^\dagger$ & Independent & 100.0 & 0.0 & 0.0 & 50.0 \\
           & Rationale   & 100.0 & 0.0 & 0.0 & 50.0 \\
 Mistral 7B & Independent & 77.1 & 93.8 & 0.0 & 85.4 \\
            & Rationale   & 100.0 & 58.3 & 0.0 & 79.2 \\
 Phi-4-mini & Independent & 50.0 & 100.0 & 0.0 & 75.0 \\
            & Rationale   & 20.8 & 100.0 & 25.0 & 60.4 \\
-Gemma 3 4B & Independent & 100.0 & 0.0 & 0.0 & 50.0 \\
+Gemma 3 4B$^\dagger$ & Independent & 100.0 & 0.0 & 0.0 & 50.0 \\
            & Rationale   & 100.0 & 0.0 & 0.0 & 50.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The exact-disposition result depends on the policy convention. Table~\ref{tabconventions} keeps the valid target at \texttt{ELIGIBLE} and rescoring the invalid target only. No convention makes every model correct. The alternative changes the model ranking because Mistral and Phi often request information, while the two constant acceptors cannot benefit.
+
+\begin{table}[t]
+\caption{Balanced exact-disposition accuracy in percent under two invalid-source targets. Each score averages a 48-record valid cell and a 96-record invalid cell. I uses \texttt{INELIGIBLE}. N uses \texttt{NEED\_INFORMATION}.}
+\label{tabconventions}
+\centering
+\small
+\begin{tabular}{lrr@{\hspace{1.3em}}rr}
+\toprule
+& \multicolumn{2}{c}{Independent} & \multicolumn{2}{c}{Rationale} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Model & I & N & I & N \\
+\midrule
+Qwen3 4B$^\dagger$ & 50.0 & 50.0 & 50.0 & 50.0 \\
+Mistral 7B & 38.5 & 85.4 & 50.0 & 79.2 \\
+Phi-4-mini & 25.0 & 62.5 & 22.9 & 29.2 \\
+Gemma 3 4B$^\dagger$ & 50.0 & 50.0 & 50.0 & 50.0 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -249,7 +272,12 @@ The exact disposition determines the procedure recommended inside this policy. A
 
 The earlier rationale has no evidentiary status in the fictional policy, yet changes source discrimination. For Mistral, valid-source sensitivity reaches 100\% while unlisted-source specificity falls to 58.3\%. Phi moves in the opposite direction on valid controls. This effect remains artifact-specific.
 
-An invalid-only test rewards a constant rejector, while a valid-only test rewards a constant acceptor. A useful audit pairs both source classes and keeps the four-way disposition. It also varies prompt order when order is absent from the decision rule.
+We call the resulting procedure the Matched Admissibility Audit.
+\begin{enumerate}
+\item Pair each unlisted-source record with accepted-source controls that preserve the request and eligibility fact.
+\item Score source discrimination and the exact four-way disposition under every policy convention the service is prepared to defend.
+\item Repeat the matched cells across prompt order and each deployed model revision, then retain the full disposition counts for accountable review.
+\end{enumerate}
 
 The workflow comparisons give no simple prompt fix. The checklist had no reliable overall gain, and prior commitment made performance worse. These findings apply to the exact prompts and model revisions in the study.
 
@@ -259,7 +287,7 @@ For peace and humanitarian work, this yields a concrete procedural requirement. 
 
 \section{Limits and ethical use}
 
-The benchmark is in English and uses short templates. Repeated wording may cue models. The two surface orders test one wording change. Translation and longer histories remain outside scope. Four selected source types cannot represent open-ended document variation.
+The benchmark is in English and uses short templates. Repeated wording may cue models. The two surface orders test one wording change. Translation and longer histories remain outside scope. Four selected source types cannot represent open-ended document variation. Four local four-bit models do not represent frontier review systems.
 
 The fictional workflows avoid direct allocation decisions, which narrows ecological validity. Real services have local rules. Affected people may lack accepted evidence or face danger when using a complaint channel. Those conditions do not appear here. The study covers four local models with greedy four-bit decoding. It does not represent proprietary systems or larger reasoning models.
 

@@ -15,10 +15,12 @@ This archive supports the AI for Peace submission `Matched Sources Expose Distin
 - `experiments/appealbench/adversarial_v2_analysis.json` contains the primary source, surface, model, and condition results.
 - `experiments/appealbench/matched_valid_controls/` contains the 384 accepted-source reviews and the supplied control protocol. The public artifact history does not establish the protocol's timing.
 - `experiments/appealbench/source_discrimination_analysis.json` contains the matched source cells, disposition matrix, 12-base-request bootstrap and protocol-specified 48-semantic-case sensitivity analysis.
+- `experiments/appealbench/dual_convention_analysis.json` rescored the frozen dispositions under the printed `INELIGIBLE` target and the alternative `NEED_INFORMATION` target.
 - `validation/appealbench/` contains dataset, run, claim, and package checks.
 - `scripts/appealbench/` contains generation, scoring, analysis, plotting, and validation code.
 - `reports/appealbench/EXPERIMENT_PROTOCOL.md` records the design and development amendment.
 - `reports/appealbench/MATCHED_VALID_SOURCE_PROTOCOL.md` records the accepted-source control before generation.
+- `reports/appealbench/DUAL_CONVENTION_SCORING_PROTOCOL.md` records the deterministic post-audit convention comparison.
 
 Every named service, policy, request, record, and evidence item is fictional. Labels describe synthetic workflow fields rather than a real person or organization.
 
@@ -82,6 +84,11 @@ python scripts/appealbench/generate_matched_valid_controls.py
 python scripts/appealbench/analyze_source_discrimination.py \
   --invalid-runs experiments/appealbench/adversarial_v2/*.jsonl \
   --valid-runs experiments/appealbench/matched_valid_controls/*.jsonl
+python scripts/appealbench/analyze_dual_convention.py \
+  --invalid-dir experiments/appealbench/adversarial_v2 \
+  --valid-dir experiments/appealbench/matched_valid_controls \
+  --output experiments/appealbench/reproduced_dual_convention_analysis.json
+cmp experiments/appealbench/dual_convention_analysis.json experiments/appealbench/reproduced_dual_convention_analysis.json
 ```
 
 The accepted-source dataset digest is `103cd2bd2a2d1430d27b0f4a48753491a65d1850772d19f05940cdb94dc5eb2c`. The joint analysis requires 768 invalid-source and 384 accepted-source reviews. Its reported invalid-source interval clusters on the 12 base requests with seed `20260825` and 20,000 samples. The same output retains the protocol-specified 48-semantic-case sensitivity interval.
