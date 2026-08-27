@@ -86,7 +86,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
 
-    paper_pages, paper_errors, paper_details = inspect_pdf(args.paper, 12)
+    paper_pages, paper_errors, paper_details = inspect_pdf(args.paper, 11)
     abstract_pages, abstract_errors, abstract_details = inspect_pdf(args.abstract, 1)
     errors = paper_errors + abstract_errors
 
@@ -94,8 +94,8 @@ def main() -> None:
     appendix_pages = [page["page"] for page in paper_pages if "Model revisions" in str(page["text"])]
     if reference_pages != [10]:
         errors.append(f"supporting-paper references must start on page 10, found {reference_pages}")
-    if appendix_pages != [12]:
-        errors.append(f"supporting-paper appendix must start on page 12, found {appendix_pages}")
+    if appendix_pages != [11]:
+        errors.append(f"supporting-paper appendix must start on page 11, found {appendix_pages}")
 
     paper_text = "\n".join(str(page["text"]) for page in paper_pages)
     compact_paper_text = re.sub(r"\s+", "", paper_text)
