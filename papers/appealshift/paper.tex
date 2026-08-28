@@ -175,7 +175,7 @@ Gemma 3 4B$^\dagger$ & Independent & 100.0 & 0.0 & 0.0 & 50.0 \\
 \end{tabular}
 \end{table}
 
-The exact-disposition result depends on the policy convention. Table~\ref{tabconventions} keeps the valid target at \texttt{ELIGIBLE} and rescoring the invalid target only. No convention makes every model correct. The alternative changes the model ranking because Mistral and Phi often request information, while the two constant acceptors cannot benefit.
+The exact-disposition result depends on the policy convention. Table~\ref{tabconventions} keeps the valid target at \texttt{ELIGIBLE} and changes only the invalid target used for rescoring. No convention makes every model correct. The alternative changes the model ranking because Mistral and Phi often request information, while the two constant acceptors cannot benefit.
 
 \begin{table}[t]
 \caption{Balanced exact-disposition accuracy in percent under two invalid-source targets. Each score averages a 48-record valid cell and a 96-record invalid cell. I uses \texttt{INELIGIBLE}. N uses \texttt{NEED\_INFORMATION}.}

@@ -281,9 +281,9 @@
       "sha256": "816695c372ca47bd32ccfb54f00b6983fea624ac69684db8bf4a0e4de2c18795"
     },
     {
-      "bytes": 75886,
+      "bytes": 75903,
       "path": "paper.pdf",
-      "sha256": "0aa9a0bd1736a8b0b7314d0df98f53d11286755125472a36f6478d0531deee3f"
+      "sha256": "1b426b7650599e50f1c812d98416c7c4878554ecb8cf70d33f4692f74bba8884"
     },
     {
       "bytes": 1932,
@@ -291,9 +291,9 @@
       "sha256": "a9258bbb1d34850c261803c1eb1f51e2ee425e60d15d0496d0e95377cd5ab08d"
     },
     {
-      "bytes": 34974,
+      "bytes": 34991,
       "path": "papers/appealshift/paper.tex",
-      "sha256": "06537b37c8f92a4e0ca635c8283a0d61a2a04ef324c70bc34ed6233c18d10ba6"
+      "sha256": "00e66b40ec69d17fbaf954433c64e8f32b000e7c6711c5513605046c4572bd20"
     },
     {
       "bytes": 6074,
